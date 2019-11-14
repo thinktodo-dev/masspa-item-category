@@ -44,6 +44,51 @@ const MasspaMenuLink = styled.a`
       height: 200px;
     }
 `
+const MasspaMenuLink02 = styled.a`
+    background-color: #ddd;
+    position: relative;
+    display: block;
+    width: ${props => props.sizeImage + 'px'};
+    height: ${props => props.sizeImage + 'px'};
+    ${({ borderRadius }) => (borderRadius === 'rounded' ? getBorderRadius(50) : `border-radius: ${borderRadius}`)};
+    border: ${props => props.borderImage};
+    z-index: 3;
+    overflow: hidden;
+    @media only screen and (max-width: 767.98px) and (min-width: 576px){
+      width: 250px;
+      height: 250px;
+    }
+    @media only screen and (max-width: 575.98px) {
+      width: 200px;
+      height: 200px;
+    }
+    @media only screen and (max-width: 479.98px) {
+      margin: 0px auto
+    }
+`
+const MasspaMenuImage02 = styled.img`
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: ${props => props.sizeImage + 'px'};
+    height: ${props => props.sizeImage + 'px'};
+    z-index: -1;
+    ${({ borderRadius }) => (borderRadius === 'rounded' ? getBorderRadius(50) : `border-radius: ${borderRadius}`)};
+   
+    @media only screen and (max-width: 767.98px) and (min-width: 576px){
+      width: 250px;
+      height: 250px;
+    }
+    @media only screen and (max-width: 575.98px) {
+      width: 200px;
+      height: 200px;
+    }
+    @media only screen and (max-width: 479.98px) {
+      margin: 0px auto
+    }
+`
+
 const MasspaMenuImage = styled.img`
     object-fit: cover;
     position: absolute;
@@ -101,6 +146,8 @@ export default class MasspaItemCategory extends Component {
     borderRadius: PropTypes.string.isRequired,
     mode: PropTypes.number.isRequired,
     animation: PropTypes.string.isRequired,
+    layout:PropTypes.number.isRequired,
+    colorTitle: PropTypes.string.isRequired
   }
 
   nextMenuCategory() {
@@ -111,7 +158,7 @@ export default class MasspaItemCategory extends Component {
   }
 
   render() {
-    const { listItems, link, sizeImage, borderImage, borderRadius, mode, animation } = this.props
+    const { listItems, link, sizeImage, borderImage, borderRadius, mode, animation , layout , colorTitle } = this.props
     if (listItems.length !== 0) {
       let featuredItems = listItems.filter(item => item.featured === 1);
       if (featuredItems.length !== 0) {
@@ -140,184 +187,188 @@ export default class MasspaItemCategory extends Component {
               <Slider ref={c => (this.sliderItemServices = c)} {...settingItem} >
               {featuredItems.map((item, i) => {
                      if(item.image === ""){
-                      if(mode === 2){
-                        if(animation === 'zoom'){
-                          return (
-                              <div className="masspa-item-category-container"  key={i}>
-                                <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                                  <span className="masspa-item-category-overlay-2">
-                                  <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                  <div  className="masspa-item-category-title-2">{item.title}</div>
-                                  </span>
-                                </MasspaMenuLink>
-                                {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                              </div>
-      
-                          )
-                        }else if(animation === 'rotate'){
-                          return (
+                        if(mode === 2){
+                          if(animation === 'zoom'){
+                            return (
+                                <div className="masspa-item-category-container"  key={i}>
+                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                    <span className="masspa-item-category-overlay-2">
+                                    <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                    </span>
+                                  </MasspaMenuLink>
+                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                                </div>
+        
+                            )
+                          }else if(animation === 'rotate'){
+                            return (
+                             
+                                <div className="masspa-item-category-container" key={i}>
+                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                                    <span className="masspa-item-category-overlay-2">
+                                    <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                    </span>
+                                  </MasspaMenuLink>
+                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                                </div>
+                            
+        
+                            )
+                          }else{
+                            return (
                            
-                              <div className="masspa-item-category-container" key={i}>
-                                <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                                  <span className="masspa-item-category-overlay-2">
-                                  <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                  <div  className="masspa-item-category-title-2">{item.title}</div>
-                                  </span>
-                                </MasspaMenuLink>
-                                {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                              </div>
+                                <div className="masspa-item-category-container" key={i}>
+                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                                    <span className="masspa-item-category-overlay-2">
+                                    <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                    </span>
+                                  </MasspaMenuLink>
+                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                                </div>
+                           
+        
+                            )
+                          }
+                     
+                         }else{
+                          if(animation === 'zoom'){
+                           return (
+                           
+                               <div className="masspa-item-category-container" key={i}>
+                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                 <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                 </MasspaMenuLink>
+                                 <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                 {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                               </div>
+                           
+       
+                           )
+                          }else if(animation === 'rotate'){
+                           return (
                           
-      
-                          )
-                        }else{
-                          return (
+                               <div className="masspa-item-category-container" key={i}>
+                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  className="masspa-item-category-rotate">
+                                 <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                 </MasspaMenuLink>
+                                 <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                 {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                               </div>
+                          
+       
+                           )
+                          }else{
+                           return (
                          
-                              <div className="masspa-item-category-container" key={i}>
-                                <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                                  <span className="masspa-item-category-overlay-2">
-                                  <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                  <div  className="masspa-item-category-title-2">{item.title}</div>
-                                  </span>
-                                </MasspaMenuLink>
-                                {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                              </div>
-                         
-      
-                          )
+                               <div className="masspa-item-category-container" key={i}>
+                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  >
+                                 <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                 </MasspaMenuLink>
+                                 <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                 {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                               </div>
+                           
+       
+                           )
+                          }
+                     
                         }
-                   
-                       }else{
-                        if(animation === 'zoom'){
-                         return (
-                         
-                             <div className="masspa-item-category-container" key={i}>
-                               <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                               <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                               </MasspaMenuLink>
-                               <div  className="masspa-item-category-title-1">{item.title}</div>
-                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                             </div>
-                         
-     
-                         )
-                        }else if(animation === 'rotate'){
-                         return (
-                        
-                             <div className="masspa-item-category-container" key={i}>
-                               <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  className="masspa-item-category-rotate">
-                               <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                               </MasspaMenuLink>
-                               <div  className="masspa-item-category-title-1">{item.title}</div>
-                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                             </div>
-                        
-     
-                         )
-                        }else{
-                         return (
                        
-                             <div className="masspa-item-category-container" key={i}>
-                               <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  >
-                               <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                               </MasspaMenuLink>
-                               <div  className="masspa-item-category-title-1">{item.title}</div>
-                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                             </div>
-                         
-     
-                         )
-                        }
-                   
-                      }
+                  
                      }else{
                        // xet co anh
-                     if(mode === 2){
-                        if(animation === 'zoom'){
-                          return (
+                        if(mode === 2){
+                          if(animation === 'zoom'){
+                            return (
+                         
+                                <div className="masspa-item-category-container" key={i}>
+                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                    <span className="masspa-item-category-overlay-2">
+                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                    </span>
+                                  </MasspaMenuLink>
+                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                                </div>
+                            
+        
+                            )
+                          }else if(animation === 'rotate'){
+                            return (
+                            
+                                <div className="masspa-item-category-container" key={i}>
+                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                                    <span className="masspa-item-category-overlay-2">
+                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                    </span>
+                                  </MasspaMenuLink>
+                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                                </div>
+                           
+        
+                            )
+                          }else{
+                            return (
+                           
+                                <div className="masspa-item-category-container" key={i}>
+                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                                    <span className="masspa-item-category-overlay-2">
+                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                    </span>
+                                  </MasspaMenuLink>
+                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                                </div>
+                            
+        
+                            )
+                          }
+                     
+                         }else{
+                          if(animation === 'zoom'){
+                           return (
+                           
+                               <div className="masspa-item-category-container" key={i}>
+                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                   <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
+                                 </MasspaMenuLink>
+                                 <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                 {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                               </div>
+                          
+       
+                           )
+                          }else if(animation === 'rotate'){
+                           return (
+                               <div className="masspa-item-category-container" key={i}>
+                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                                   <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
+                                 </MasspaMenuLink>
+                                 <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                 {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                               </div>
+       
+                           )
+                          }else{
+                           return (
+                               <div className="masspa-item-category-container" key={i}>
+                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                                   <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
+                                 </MasspaMenuLink>
+                                 <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                 {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                               </div>
+       
+                           )
+                          }
+                     
+                        }
                        
-                              <div className="masspa-item-category-container" key={i}>
-                                <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                                  <span className="masspa-item-category-overlay-2">
-                                  <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                  <div  className="masspa-item-category-title-2">{item.title}</div>
-                                  </span>
-                                </MasspaMenuLink>
-                                {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                              </div>
-                          
-      
-                          )
-                        }else if(animation === 'rotate'){
-                          return (
-                          
-                              <div className="masspa-item-category-container" key={i}>
-                                <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                                  <span className="masspa-item-category-overlay-2">
-                                  <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                  <div  className="masspa-item-category-title-2">{item.title}</div>
-                                  </span>
-                                </MasspaMenuLink>
-                                {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                              </div>
-                         
-      
-                          )
-                        }else{
-                          return (
-                         
-                              <div className="masspa-item-category-container" key={i}>
-                                <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                                  <span className="masspa-item-category-overlay-2">
-                                  <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                  <div  className="masspa-item-category-title-2">{item.title}</div>
-                                  </span>
-                                </MasspaMenuLink>
-                                {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                              </div>
-                          
-      
-                          )
-                        }
-                   
-                       }else{
-                        if(animation === 'zoom'){
-                         return (
-                         
-                             <div className="masspa-item-category-container" key={i}>
-                               <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                                 <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
-                               </MasspaMenuLink>
-                               <div  className="masspa-item-category-title-1">{item.title}</div>
-                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                             </div>
-                        
-     
-                         )
-                        }else if(animation === 'rotate'){
-                         return (
-                             <div className="masspa-item-category-container" key={i}>
-                               <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                                 <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
-                               </MasspaMenuLink>
-                               <div  className="masspa-item-category-title-1">{item.title}</div>
-                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                             </div>
-     
-                         )
-                        }else{
-                         return (
-                             <div className="masspa-item-category-container" key={i}>
-                               <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                                 <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
-                               </MasspaMenuLink>
-                               <div  className="masspa-item-category-title-1">{item.title}</div>
-                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                             </div>
-     
-                         )
-                        }
-                   
-                      }
+                
              
                      }
                
@@ -330,192 +381,421 @@ export default class MasspaItemCategory extends Component {
           )
 
          } else {
-          return  <div className="row w-100">
+
+          return  <div className="row no-gutters">
           {featuredItems.map((item, i) => {
             if (item.image === "" || item.image === null) {
-              if (mode === 2) {
-                if (animation === 'zoom') {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
-                        <MasspaMenuLink href={link}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                          <span className="masspa-item-category-overlay-2">
-                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                            <div className="masspa-item-category-title-2">{item.title}</div>
-                          </span>
-                        </MasspaMenuLink>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                      </div>
-                    </div>
-
-                  )
-                } else if (animation === 'rotate') {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
-                        <MasspaMenuLink href={link}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                          <span className="masspa-item-category-overlay-2">
-                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                            <div className="masspa-item-category-title-2">{item.title}</div>
-                          </span>
-                        </MasspaMenuLink>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                      </div>
-                    </div>
-
-                  )
-                } else {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                          <span className="masspa-item-category-overlay-2">
-                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                            <div className="masspa-item-category-title-2">{item.title}</div>
-                          </span>
-                        </MasspaMenuLink>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                      </div>
-                    </div>
-
-                  )
-                }
-
-              } else {
-                if (animation === 'zoom') {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
+              if(layout === 2){
+                //dang dac biet
+                if (mode === 2) {
+                  if(animation === 'zoom'){
+                    return (
+                      <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                      <div className="masspa-item-category-card fade-in-left">
+                        <div className="col-md-5 col-sm-5">
                         <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                          <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
                         </MasspaMenuLink>
-                        <div className="masspa-item-category-title-1">{item.title}</div>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      <div className="col-md-7 col-sm-7">
+                      <div className="masspa-item-category-group-title-text">
+                          {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
                       </div>
                     </div>
-
-                  )
-                } else if (animation === 'rotate') {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
-                        <MasspaMenuLink href={link}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                          <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                    )
+                  }else if(animation === 'rotate'){
+                    return (
+                      <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                      <div className="masspa-item-category-card fade-in-left">
+                        <div className="col-md-5 col-sm-5">
+                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
                         </MasspaMenuLink>
-                        <div className="masspa-item-category-title-1">{item.title}</div>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      <div className="col-md-7 col-sm-7">
+                      <div className="masspa-item-category-group-title-text">
+                          {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
                       </div>
                     </div>
-
-                  )
-                } else {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                          <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                        </MasspaMenuLink>
-                        <div className="masspa-item-category-title-1">{item.name}</div>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                    )
+                  }else{
+                    return(
+                      <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                        <div className="masspa-item-category-card fade-in-left">
+                          <div className="col-md-5 col-sm-5">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink>
+                          </div>
+                        <div className="col-md-7 col-sm-7">
+                        <div className="masspa-item-category-group-title-text">
+                            {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    )
+                  }
+                }else{
+                  return(
+                    <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                      <div className="masspa-item-category-card fade-in-left">
+                        <div className="col-md-5 col-sm-5">
+                        <MasspaMenuLink02 href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <MasspaMenuImage02 src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
+                        </MasspaMenuLink02>
+                        </div>
+                      <div className="col-md-7 col-sm-7">
+                      <div className="masspa-item-category-group-title-text">
+                          <a href={link}>
+                            <span className="masspa-item-category-title-3" style={{color : `${colorTitle}`}}>
+                              {item.title}
+                            </span>
+                          </a>
+                          {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
                       </div>
                     </div>
-
                   )
                 }
-
+            
+              }else{
+                if (mode === 2) {
+                  if (animation === 'zoom') {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  } else if (animation === 'rotate') {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  } else {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  }
+  
+                } else {
+                  if (animation === 'zoom') {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                          </MasspaMenuLink>
+                          <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  } else if (animation === 'rotate') {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                          </MasspaMenuLink>
+                          <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  } else {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                          </MasspaMenuLink>
+                          <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  }
+  
+                }
               }
+         
             } else {
-              if (mode === 2) {
-                if (animation === 'zoom') {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
+              if(layout === 2){
+                //dang dac biet
+                if (mode === 2) {
+                  if(animation === 'zoom'){
+                    return (
+                      <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                      <div className="masspa-item-category-card fade-in-left">
+                        <div className="col-md-5 col-sm-5">
                         <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
                           <span className="masspa-item-category-overlay-2">
                             <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                            <div className="masspa-item-category-title-2">{item.title}</div>
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                           </span>
                         </MasspaMenuLink>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      <div className="col-md-7 col-sm-7">
+                      <div className="masspa-item-category-group-title-text">
+                          {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
                       </div>
                     </div>
-
-                  )
-                } else if (animation === 'rotate') {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
+                    )
+                  }else if(animation === 'rotate'){
+                    return (
+                      <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                      <div className="masspa-item-category-card fade-in-left">
+                        <div className="col-md-5 col-sm-5">
                         <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
                           <span className="masspa-item-category-overlay-2">
                             <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                            <div className="masspa-item-category-title-2">{item.title}</div>
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                           </span>
                         </MasspaMenuLink>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      <div className="col-md-7 col-sm-7">
+                      <div className="masspa-item-category-group-title-text">
+                          {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
                       </div>
                     </div>
-
-                  )
+                    )
+                  }else{
+                    return(
+                      <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                        <div className="masspa-item-category-card fade-in-left">
+                          <div className="col-md-5 col-sm-5">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink>
+                          </div>
+                        <div className="col-md-7 col-sm-7">
+                        <div className="masspa-item-category-group-title-text">
+                            {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    )
+                  }
+                }else{
+                  if (animation === 'zoom') {
+                    return(
+                      <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                        <div className="masspa-item-category-card fade-in-left">
+                          <div className="col-md-5 col-sm-5">
+                          <MasspaMenuLink02 href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                            <MasspaMenuImage02 src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
+                          </MasspaMenuLink02>
+                          </div>
+                        <div className="col-md-7 col-sm-7">
+                        <div className="masspa-item-category-group-title-text">
+                            <a href={link}>
+                              <span className="masspa-item-category-title-3" style={{color : `${colorTitle}`}}>
+                                {item.title}
+                              </span>
+                            </a>
+                            {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    )
+                  }else if(animation === 'rotate'){
+                    return(
+                      <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                        <div className="masspa-item-category-card fade-in-left">
+                          <div className="col-md-5 col-sm-5">
+                          <MasspaMenuLink02 href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                            <MasspaMenuImage02 src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
+                          </MasspaMenuLink02>
+                          </div>
+                        <div className="col-md-7 col-sm-7">
+                        <div className="masspa-item-category-group-title-text">
+                            <a href={link}>
+                              <span className="masspa-item-category-title-3" style={{color : `${colorTitle}`}}>
+                                {item.title}
+                              </span>
+                            </a>
+                            {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    )
+                  }else{
+                    return(
+                      <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
+                        <div className="masspa-item-category-card fade-in-left">
+                          <div className="col-md-5 col-sm-5">
+                          <MasspaMenuLink02 href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                            <MasspaMenuImage02 src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
+                          </MasspaMenuLink02>
+                          </div>
+                        <div className="col-md-7 col-sm-7">
+                        <div className="masspa-item-category-group-title-text">
+                            <a href={link}>
+                              <span className="masspa-item-category-title-3" style={{color : `${colorTitle}`}}>
+                                {item.title}
+                              </span>
+                            </a>
+                            {item.description !== null ? <div className="masspa-item-category-text-layout02" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    )
+                  }
+                }
+         
+              }else{
+                if (mode === 2) {
+                  if (animation === 'zoom') {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  } else if (animation === 'rotate') {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  } else {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  }
+  
                 } else {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                          <span className="masspa-item-category-overlay-2">
+                  if (animation === 'zoom') {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
                             <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                            <div className="masspa-item-category-title-2">{item.title}</div>
-                          </span>
-                        </MasspaMenuLink>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                          </MasspaMenuLink>
+                          <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
                       </div>
-                    </div>
-
-                  )
+  
+                    )
+                  } else if (animation === 'rotate') {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                          </MasspaMenuLink>
+                          <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  } else {
+                    return (
+                      <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
+                        <div className="masspa-item-category-container">
+                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                          </MasspaMenuLink>
+                          <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
+                        </div>
+                      </div>
+  
+                    )
+                  }
+  
                 }
-
-              } else {
-                if (animation === 'zoom') {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                          <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                        </MasspaMenuLink>
-                        <div className="masspa-item-category-title-1">{item.title}</div>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                      </div>
-                    </div>
-
-                  )
-                } else if (animation === 'rotate') {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                          <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                        </MasspaMenuLink>
-                        <div className="masspa-item-category-title-1">{item.title}</div>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                      </div>
-                    </div>
-
-                  )
-                } else {
-                  return (
-                    <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
-                      <div className="masspa-item-category-container">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                          <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                        </MasspaMenuLink>
-                        <div className="masspa-item-category-title-1">{item.name}</div>
-                        {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
-                      </div>
-                    </div>
-
-                  )
-                }
-
               }
+        
             }
           })
         }
@@ -543,4 +823,6 @@ MasspaItemCategory.defaultProps = {
   borderRadius: '49px 49px 49px 0',
   mode: 1,
   animation: 'zoom',
+  layout: 1,
+  colorTitle:"#fd7400"
 }

@@ -30,7 +30,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css = "/* add css styles here (optional) */\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\nhtml {\n  font-family: sans-serif;\n  line-height: 1.15;\n  -webkit-text-size-adjust: 100%;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n.row {\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n  margin-right: -15px;\n  margin-left: -15px;\n}\n\n.no-gutters {\n  margin-right: 0;\n  margin-left: 0;\n}\n\n.no-gutters > .col,\n.no-gutters > [class*=\"col-\"] {\n  padding-right: 0;\n  padding-left: 0;\n}\n\n.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,\n.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,\n.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,\n.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,\n.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,\n.col-xl-auto {\n  position: relative;\n  width: 100%;\n  padding-right: 15px;\n  padding-left: 15px;\n}\n\n.col {\n  -ms-flex-preferred-size: 0;\n  flex-basis: 0;\n  -ms-flex-positive: 1;\n  flex-grow: 1;\n  max-width: 100%;\n}\n\n.col-auto {\n  -ms-flex: 0 0 auto;\n  flex: 0 0 auto;\n  width: auto;\n  max-width: 100%;\n}\n\n.col-1 {\n  -ms-flex: 0 0 8.333333%;\n  flex: 0 0 8.333333%;\n  max-width: 8.333333%;\n}\n\n.col-2 {\n  -ms-flex: 0 0 16.666667%;\n  flex: 0 0 16.666667%;\n  max-width: 16.666667%;\n}\n\n.col-3 {\n  -ms-flex: 0 0 25%;\n  flex: 0 0 25%;\n  max-width: 25%;\n}\n\n.col-4 {\n  -ms-flex: 0 0 33.333333%;\n  flex: 0 0 33.333333%;\n  max-width: 33.333333%;\n}\n\n.col-5 {\n  -ms-flex: 0 0 41.666667%;\n  flex: 0 0 41.666667%;\n  max-width: 41.666667%;\n}\n\n.col-6 {\n  -ms-flex: 0 0 50%;\n  flex: 0 0 50%;\n  max-width: 50%;\n}\n\n.col-7 {\n  -ms-flex: 0 0 58.333333%;\n  flex: 0 0 58.333333%;\n  max-width: 58.333333%;\n}\n\n.col-8 {\n  -ms-flex: 0 0 66.666667%;\n  flex: 0 0 66.666667%;\n  max-width: 66.666667%;\n}\n\n.col-9 {\n  -ms-flex: 0 0 75%;\n  flex: 0 0 75%;\n  max-width: 75%;\n}\n\n.col-10 {\n  -ms-flex: 0 0 83.333333%;\n  flex: 0 0 83.333333%;\n  max-width: 83.333333%;\n}\n\n.col-11 {\n  -ms-flex: 0 0 91.666667%;\n  flex: 0 0 91.666667%;\n  max-width: 91.666667%;\n}\n\n.col-12 {\n  -ms-flex: 0 0 100%;\n  flex: 0 0 100%;\n  max-width: 100%;\n}\n.w-100{\n  width: 100%;\n}\n\np{\n  margin:0px;\n}\n.masspa-item-category-slide-container{\n  position: relative;\n}\n.masspa-item-category-container{\n  display: flex;\n\tflex-direction: column;\n\tjustify-content: center;\n  align-items: center;\n  padding: 40px 0px;\n}\n\n.masspa-item-category-title-1{\n    color: #141517;\n    line-height: 22px;\n  \n    margin-bottom: 0;\n    text-align: center;\n    text-transform: uppercase;\n}\n.masspa-item-category-title-2{\n  color: #ffffff;\n  line-height: 22px;\n  margin-bottom: 0;\n  text-align: center;\n  font-weight: 400;\n  text-transform: uppercase;\n  height: 100%;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.masspa-item-category-text{\n  height: 78px;\n  overflow: hidden;\n}\n\n.masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\n  color: #2c2e3f !important;\n  font-family: sans-serif !important;\n  line-height: 1.625 !important;\n  height: 75px;\n  overflow: hidden;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  text-overflow: ellipsis;\n  padding: 15px;\n}\n\n.masspa-item-category-overlay-2{\n  position: absolute;\n  background-image:  linear-gradient(to bottom, rgba(255,0,0,0), rgba(40,40,40,1));\n  bottom: 0;\n  height: 40%;\n  width: inherit;\n  display: inline-block;\n}\n\n.masspa-item-category-zoom, .masspa-item-category-rotate{\n  -webkit-transition: all .5s;\n  -moz-transition: all .5s;\n  -o-transition: all .5s;\n  transition: all .5s;\n}\n.masspa-item-category-zoom:hover , .masspa-item-category-zoom:focus {\n  -ms-transform: scale(1.2);\n  -moz-transform: scale(1.2);\n  -webkit-transform: scale(1.2);\n  -o-transform: scale(1.2);\n  transform: scale(1.2);\n}\n\n.masspa-item-category-rotate:hover , .masspa-item-category-rotate:focus{\n  -ms-transform: rotate(360deg);\n  -moz-transform: rotate(360deg);\n  -webkit-transform: rotate(360deg);\n  -o-transform: rotate(360deg);\n  transform: rotate(360deg);\n}\n\n\n@media only screen and (min-width: 768px){\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span {\n    font-size: 14px;\n  }\n  .masspa-item-category-title-1{\n    font-size: 18px;\n    padding: 30px 8px 5px;\n  }\n  .masspa-item-category-title-2{\n    font-size: 18px;\n    padding: 20px 8px;\n  }\n}\n\n@media only screen and (max-width: 767.98px) {\n  .masspa-item-category-title-1{\n    font-size: 20px;\n    padding: 30px 8px 5px;\n  }\n \n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\n    font-size: 14px;\n  }\n\n}\n\n@media only screen and (max-width: 767.98px) and (min-width: 457px){\n  .masspa-item-category-title-2{\n    font-size: 24px;\n    padding: 40px 15px 0px;\n  }\n}\n\n@media only screen and (max-width: 456.98px) {\n  .masspa-item-category-title-2{\n    font-size: 24px;\n    padding: 20px 15px 0px;\n  }\n}\n\n@media (min-width: 576px) {\n  .col-sm {\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    -ms-flex-positive: 1;\n    flex-grow: 1;\n    max-width: 100%;\n  }\n  .col-sm-auto {\n    -ms-flex: 0 0 auto;\n    flex: 0 0 auto;\n    width: auto;\n    max-width: 100%;\n  }\n  .col-sm-1 {\n    -ms-flex: 0 0 8.333333%;\n    flex: 0 0 8.333333%;\n    max-width: 8.333333%;\n  }\n  .col-sm-2 {\n    -ms-flex: 0 0 16.666667%;\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-sm-3 {\n    -ms-flex: 0 0 25%;\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .col-sm-4 {\n    -ms-flex: 0 0 33.333333%;\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .col-sm-5 {\n    -ms-flex: 0 0 41.666667%;\n    flex: 0 0 41.666667%;\n    max-width: 41.666667%;\n  }\n  .col-sm-6 {\n    -ms-flex: 0 0 50%;\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .col-sm-7 {\n    -ms-flex: 0 0 58.333333%;\n    flex: 0 0 58.333333%;\n    max-width: 58.333333%;\n  }\n  .col-sm-8 {\n    -ms-flex: 0 0 66.666667%;\n    flex: 0 0 66.666667%;\n    max-width: 66.666667%;\n  }\n  .col-sm-9 {\n    -ms-flex: 0 0 75%;\n    flex: 0 0 75%;\n    max-width: 75%;\n  }\n  .col-sm-10 {\n    -ms-flex: 0 0 83.333333%;\n    flex: 0 0 83.333333%;\n    max-width: 83.333333%;\n  }\n  .col-sm-11 {\n    -ms-flex: 0 0 91.666667%;\n    flex: 0 0 91.666667%;\n    max-width: 91.666667%;\n  }\n  .col-sm-12 {\n    -ms-flex: 0 0 100%;\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n}\n\n@media (min-width: 768px) {\n  .col-md {\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    -ms-flex-positive: 1;\n    flex-grow: 1;\n    max-width: 100%;\n  }\n  .col-md-auto {\n    -ms-flex: 0 0 auto;\n    flex: 0 0 auto;\n    width: auto;\n    max-width: 100%;\n  }\n  .col-md-1 {\n    -ms-flex: 0 0 8.333333%;\n    flex: 0 0 8.333333%;\n    max-width: 8.333333%;\n  }\n  .col-md-2 {\n    -ms-flex: 0 0 16.666667%;\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-md-3 {\n    -ms-flex: 0 0 25%;\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .col-md-4 {\n    -ms-flex: 0 0 33.333333%;\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .col-md-5 {\n    -ms-flex: 0 0 41.666667%;\n    flex: 0 0 41.666667%;\n    max-width: 41.666667%;\n  }\n  .col-md-6 {\n    -ms-flex: 0 0 50%;\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .col-md-7 {\n    -ms-flex: 0 0 58.333333%;\n    flex: 0 0 58.333333%;\n    max-width: 58.333333%;\n  }\n  .col-md-8 {\n    -ms-flex: 0 0 66.666667%;\n    flex: 0 0 66.666667%;\n    max-width: 66.666667%;\n  }\n  .col-md-9 {\n    -ms-flex: 0 0 75%;\n    flex: 0 0 75%;\n    max-width: 75%;\n  }\n  .col-md-10 {\n    -ms-flex: 0 0 83.333333%;\n    flex: 0 0 83.333333%;\n    max-width: 83.333333%;\n  }\n  .col-md-11 {\n    -ms-flex: 0 0 91.666667%;\n    flex: 0 0 91.666667%;\n    max-width: 91.666667%;\n  }\n  .col-md-12 {\n    -ms-flex: 0 0 100%;\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n}\n@media (min-width: 992px) {\n  .col-lg {\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    -ms-flex-positive: 1;\n    flex-grow: 1;\n    max-width: 100%;\n  }\n  .col-lg-auto {\n    -ms-flex: 0 0 auto;\n    flex: 0 0 auto;\n    width: auto;\n    max-width: 100%;\n  }\n  .col-lg-1 {\n    -ms-flex: 0 0 8.333333%;\n    flex: 0 0 8.333333%;\n    max-width: 8.333333%;\n  }\n  .col-lg-2 {\n    -ms-flex: 0 0 16.666667%;\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-lg-3 {\n    -ms-flex: 0 0 25%;\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .col-lg-4 {\n    -ms-flex: 0 0 33.333333%;\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .col-lg-5 {\n    -ms-flex: 0 0 41.666667%;\n    flex: 0 0 41.666667%;\n    max-width: 41.666667%;\n  }\n  .col-lg-6 {\n    -ms-flex: 0 0 50%;\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .col-lg-7 {\n    -ms-flex: 0 0 58.333333%;\n    flex: 0 0 58.333333%;\n    max-width: 58.333333%;\n  }\n  .col-lg-8 {\n    -ms-flex: 0 0 66.666667%;\n    flex: 0 0 66.666667%;\n    max-width: 66.666667%;\n  }\n  .col-lg-9 {\n    -ms-flex: 0 0 75%;\n    flex: 0 0 75%;\n    max-width: 75%;\n  }\n  .col-lg-10 {\n    -ms-flex: 0 0 83.333333%;\n    flex: 0 0 83.333333%;\n    max-width: 83.333333%;\n  }\n  .col-lg-11 {\n    -ms-flex: 0 0 91.666667%;\n    flex: 0 0 91.666667%;\n    max-width: 91.666667%;\n  }\n  .col-lg-12 {\n    -ms-flex: 0 0 100%;\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n}\n\n@media (min-width: 1200px) {\n  .col-xl {\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    -ms-flex-positive: 1;\n    flex-grow: 1;\n    max-width: 100%;\n  }\n  .col-xl-auto {\n    -ms-flex: 0 0 auto;\n    flex: 0 0 auto;\n    width: auto;\n    max-width: 100%;\n  }\n  .col-xl-1 {\n    -ms-flex: 0 0 8.333333%;\n    flex: 0 0 8.333333%;\n    max-width: 8.333333%;\n  }\n  .col-xl-2 {\n    -ms-flex: 0 0 16.666667%;\n    flex: 0 0 16.666667%;\n    max-width: 16.666667%;\n  }\n  .col-xl-3 {\n    -ms-flex: 0 0 25%;\n    flex: 0 0 25%;\n    max-width: 25%;\n  }\n  .col-xl-4 {\n    -ms-flex: 0 0 33.333333%;\n    flex: 0 0 33.333333%;\n    max-width: 33.333333%;\n  }\n  .col-xl-5 {\n    -ms-flex: 0 0 41.666667%;\n    flex: 0 0 41.666667%;\n    max-width: 41.666667%;\n  }\n  .col-xl-6 {\n    -ms-flex: 0 0 50%;\n    flex: 0 0 50%;\n    max-width: 50%;\n  }\n  .col-xl-7 {\n    -ms-flex: 0 0 58.333333%;\n    flex: 0 0 58.333333%;\n    max-width: 58.333333%;\n  }\n  .col-xl-8 {\n    -ms-flex: 0 0 66.666667%;\n    flex: 0 0 66.666667%;\n    max-width: 66.666667%;\n  }\n  .col-xl-9 {\n    -ms-flex: 0 0 75%;\n    flex: 0 0 75%;\n    max-width: 75%;\n  }\n  .col-xl-10 {\n    -ms-flex: 0 0 83.333333%;\n    flex: 0 0 83.333333%;\n    max-width: 83.333333%;\n  }\n  .col-xl-11 {\n    -ms-flex: 0 0 91.666667%;\n    flex: 0 0 91.666667%;\n    max-width: 91.666667%;\n  }\n  .col-xl-12 {\n    -ms-flex: 0 0 100%;\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n}";
+var css = "/* add css styles here (optional) */\r\n*,\r\n*::before,\r\n*::after {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  font-family: sans-serif;\r\n  line-height: 1.15;\r\n  -webkit-text-size-adjust: 100%;\r\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n}\r\n\r\na{\r\n  text-decoration: unset;\r\n}\r\n\r\n.row {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-wrap: wrap;\r\n  flex-wrap: wrap;\r\n  margin-right: -15px;\r\n  margin-left: -15px;\r\n}\r\n\r\n.no-gutters {\r\n  margin-right: 0;\r\n  margin-left: 0;\r\n}\r\n\r\n.no-gutters > .col,\r\n.no-gutters > [class*=\"col-\"] {\r\n  padding-right: 0;\r\n  padding-left: 0;\r\n}\r\n\r\n.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,\r\n.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,\r\n.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,\r\n.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,\r\n.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,\r\n.col-xl-auto {\r\n  position: relative;\r\n  width: 100%;\r\n  padding-right: 15px;\r\n  padding-left: 15px;\r\n}\r\n\r\n.col {\r\n  -ms-flex-preferred-size: 0;\r\n  flex-basis: 0;\r\n  -ms-flex-positive: 1;\r\n  flex-grow: 1;\r\n  max-width: 100%;\r\n}\r\n\r\n.col-auto {\r\n  -ms-flex: 0 0 auto;\r\n  flex: 0 0 auto;\r\n  width: auto;\r\n  max-width: 100%;\r\n}\r\n\r\n.col-1 {\r\n  -ms-flex: 0 0 8.333333%;\r\n  flex: 0 0 8.333333%;\r\n  max-width: 8.333333%;\r\n}\r\n\r\n.col-2 {\r\n  -ms-flex: 0 0 16.666667%;\r\n  flex: 0 0 16.666667%;\r\n  max-width: 16.666667%;\r\n}\r\n\r\n.col-3 {\r\n  -ms-flex: 0 0 25%;\r\n  flex: 0 0 25%;\r\n  max-width: 25%;\r\n}\r\n\r\n.col-4 {\r\n  -ms-flex: 0 0 33.333333%;\r\n  flex: 0 0 33.333333%;\r\n  max-width: 33.333333%;\r\n}\r\n\r\n.col-5 {\r\n  -ms-flex: 0 0 41.666667%;\r\n  flex: 0 0 41.666667%;\r\n  max-width: 41.666667%;\r\n}\r\n\r\n.col-6 {\r\n  -ms-flex: 0 0 50%;\r\n  flex: 0 0 50%;\r\n  max-width: 50%;\r\n}\r\n\r\n.col-7 {\r\n  -ms-flex: 0 0 58.333333%;\r\n  flex: 0 0 58.333333%;\r\n  max-width: 58.333333%;\r\n}\r\n\r\n.col-8 {\r\n  -ms-flex: 0 0 66.666667%;\r\n  flex: 0 0 66.666667%;\r\n  max-width: 66.666667%;\r\n}\r\n\r\n.col-9 {\r\n  -ms-flex: 0 0 75%;\r\n  flex: 0 0 75%;\r\n  max-width: 75%;\r\n}\r\n\r\n.col-10 {\r\n  -ms-flex: 0 0 83.333333%;\r\n  flex: 0 0 83.333333%;\r\n  max-width: 83.333333%;\r\n}\r\n\r\n.col-11 {\r\n  -ms-flex: 0 0 91.666667%;\r\n  flex: 0 0 91.666667%;\r\n  max-width: 91.666667%;\r\n}\r\n\r\n.col-12 {\r\n  -ms-flex: 0 0 100%;\r\n  flex: 0 0 100%;\r\n  max-width: 100%;\r\n}\r\n.w-100{\r\n  width: 100%;\r\n}\r\n\r\np{\r\n  margin:0px;\r\n}\r\n.masspa-item-category-title-3{font-size:22px;line-height:25px;font-weight:300;font-family:open sans,sans-serif; text-align: left; color: #000000;}\r\n\r\n.masspa-item-category-slide-container{\r\n  position: relative;\r\n}\r\n.masspa-item-category-container{\r\n  display: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n  align-items: center;\r\n  padding: 40px 0px;\r\n}\r\n\r\n.masspa-item-category-title-1{\r\n    color: #141517;\r\n    line-height: 22px;\r\n  \r\n    margin-bottom: 0;\r\n    text-align: center;\r\n    text-transform: uppercase;\r\n}\r\n.masspa-item-category-title-2{\r\n  color: #ffffff;\r\n  line-height: 22px;\r\n  margin-bottom: 0;\r\n  text-align: center;\r\n  font-weight: 400;\r\n  text-transform: uppercase;\r\n  height: 100%;\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.masspa-item-category-text{\r\n  height: 78px;\r\n  overflow: hidden;\r\n}\r\n\r\n.masspa-item-category-text-layout02 p , .masspa-item-category-text-layout02 p span,  .masspa-item-category-text-layout02 span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 50px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 2;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n  font-size: 15px;\r\n  padding: 0px;\r\n}\r\n\r\n.masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 70px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 3;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n  text-align: center;\r\n}\r\n\r\n.masspa-item-category-overlay-2{\r\n  position: absolute;\r\n  background-image:  linear-gradient(to bottom, rgba(255,0,0,0), rgba(40,40,40,1));\r\n  bottom: 0;\r\n  height: 40%;\r\n  width: inherit;\r\n  display: inline-block;\r\n}\r\n\r\n.masspa-item-category-zoom, .masspa-item-category-rotate{\r\n  -webkit-transition: all .5s;\r\n  -moz-transition: all .5s;\r\n  -o-transition: all .5s;\r\n  transition: all .5s;\r\n}\r\n.masspa-item-category-zoom:hover , .masspa-item-category-zoom:focus {\r\n  -ms-transform: scale(1.2);\r\n  -moz-transform: scale(1.2);\r\n  -webkit-transform: scale(1.2);\r\n  -o-transform: scale(1.2);\r\n  transform: scale(1.2);\r\n}\r\n\r\n.masspa-item-category-rotate:hover , .masspa-item-category-rotate:focus{\r\n  -ms-transform: rotate(360deg);\r\n  -moz-transform: rotate(360deg);\r\n  -webkit-transform: rotate(360deg);\r\n  -o-transform: rotate(360deg);\r\n  transform: rotate(360deg);\r\n}\r\n\r\n\r\n@media only screen and (min-width: 768px){\r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span {\r\n    font-size: 14px;\r\n  }\r\n  .masspa-item-category-title-1{\r\n    font-size: 18px;\r\n    padding: 30px 8px 5px;\r\n  }\r\n  .masspa-item-category-title-2{\r\n    font-size: 18px;\r\n    padding: 20px 8px;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) {\r\n  .masspa-item-category-title-1{\r\n    font-size: 20px;\r\n    padding: 30px 8px 5px;\r\n  }\r\n \r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n    font-size: 14px;\r\n  }\r\n\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) and (min-width: 457px){\r\n  .masspa-item-category-title-2{\r\n    font-size: 24px;\r\n    padding: 40px 15px 0px;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 456.98px) {\r\n  .masspa-item-category-title-2{\r\n    font-size: 24px;\r\n    padding: 20px 15px 0px;\r\n  }\r\n}\r\n\r\n@media (min-width: 576px) {\r\n  .col-sm {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-grow: 1;\r\n    max-width: 100%;\r\n  }\r\n  .col-sm-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .col-sm-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .col-sm-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .col-sm-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .col-sm-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .col-sm-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .col-sm-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .col-sm-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .col-sm-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .col-sm-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .col-sm-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .col-sm-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .col-sm-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  .col-md {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-grow: 1;\r\n    max-width: 100%;\r\n  }\r\n  .col-md-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .col-md-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .col-md-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .col-md-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .col-md-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .col-md-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .col-md-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .col-md-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .col-md-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .col-md-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .col-md-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .col-md-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .col-md-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n@media (min-width: 992px) {\r\n  .col-lg {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-grow: 1;\r\n    max-width: 100%;\r\n  }\r\n  .col-lg-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .col-lg-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .col-lg-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .col-lg-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .col-lg-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .col-lg-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .col-lg-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .col-lg-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .col-lg-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .col-lg-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .col-lg-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .col-lg-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .col-lg-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .col-xl {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-grow: 1;\r\n    max-width: 100%;\r\n  }\r\n  .col-xl-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .col-xl-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .col-xl-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .col-xl-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .col-xl-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .col-xl-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .col-xl-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .col-xl-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .col-xl-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .col-xl-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .col-xl-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .col-xl-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .col-xl-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media screen and (min-width:992px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n  }\r\n}\r\n@media screen  and (min-width:576px) and (max-width:991px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 30px;\r\n  }\r\n}\r\n\r\n@media screen  and (min-width:480px) and (max-width:575.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n  }\r\n}\r\n\r\n@media screen  and (max-width:479.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n    padding-top: 20px;\r\n    text-align: center;\r\n  }\r\n  .masspa-item-category-text-layout02{\r\n    padding-top: 20px;\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 240px) and (max-width:767.98px) {\r\n .col-xs-6{flex:0 0 100%;max-width:100%}\r\n  }\r\n\r\n  @media screen and (min-width: 1024px) {\r\n    .col-xs-6{flex:0 0 50%!important;max-width:50%!important}\r\n  }\r\n \r\n  @media screen and (min-width: 240px) {\r\n      .masspa-item-category-card{padding:15px 0}\r\n      .masspa-item-category-card{display:flex;flex-direction:column;justify-content:center;align-items:center}\r\n  }\r\n\r\n  @media screen and (min-width: 480px) {\r\n    .masspa-item-category-card{display:flex;flex-direction:row;justify-content:unset}\r\n  }";
 styleInject(css);
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -7576,9 +7576,11 @@ var taggedTemplateLiteral = function (strings, raw) {
 };
 
 var _templateObject = taggedTemplateLiteral(['\n    background-color: #ddd;\n    position: relative;\n    display: block;\n    margin: 0px auto;\n    width: ', ';\n    height: ', ';\n    ', ';\n    border: ', ';\n    z-index: 3;\n    overflow: hidden;\n    @media only screen and (max-width: 767.98px) and (min-width: 457px){\n      width: ', ';\n      height: ', ';\n    }\n    @media only screen and (max-width: 456.98px) {\n      width: 200px;\n      height: 200px;\n    }\n'], ['\n    background-color: #ddd;\n    position: relative;\n    display: block;\n    margin: 0px auto;\n    width: ', ';\n    height: ', ';\n    ', ';\n    border: ', ';\n    z-index: 3;\n    overflow: hidden;\n    @media only screen and (max-width: 767.98px) and (min-width: 457px){\n      width: ', ';\n      height: ', ';\n    }\n    @media only screen and (max-width: 456.98px) {\n      width: 200px;\n      height: 200px;\n    }\n']),
-    _templateObject2 = taggedTemplateLiteral(['\n    object-fit: cover;\n    position: absolute;\n    left: 50%;\n    ', ';\n    ', ';\n    width: ', ';\n    height: ', ';\n    z-index: -1;\n    ', ';\n   \n    @media only screen and (max-width: 767.98px) and (min-width: 457px){\n      width: ', ';\n      height: ', ';\n    }\n    @media only screen and (max-width: 456.98px) {\n      width: 200px;\n      height: 200px;\n    }\n'], ['\n    object-fit: cover;\n    position: absolute;\n    left: 50%;\n    ', ';\n    ', ';\n    width: ', ';\n    height: ', ';\n    z-index: -1;\n    ', ';\n   \n    @media only screen and (max-width: 767.98px) and (min-width: 457px){\n      width: ', ';\n      height: ', ';\n    }\n    @media only screen and (max-width: 456.98px) {\n      width: 200px;\n      height: 200px;\n    }\n']),
-    _templateObject3 = taggedTemplateLiteral(['\n    position : absolute;\n    top: 30%;\n    left: 0%;\n    width: 20px;\n    height: 20px;\n    z-index: 2;\n    cursor: pointer;\n   \n'], ['\n    position : absolute;\n    top: 30%;\n    left: 0%;\n    width: 20px;\n    height: 20px;\n    z-index: 2;\n    cursor: pointer;\n   \n']),
-    _templateObject4 = taggedTemplateLiteral(['\n    position : absolute;\n    top: 30%;\n    right: 0%;\n    width: 20px;\n    height: 20px;\n    z-index: 2;\n    cursor: pointer;\n'], ['\n    position : absolute;\n    top: 30%;\n    right: 0%;\n    width: 20px;\n    height: 20px;\n    z-index: 2;\n    cursor: pointer;\n']);
+    _templateObject2 = taggedTemplateLiteral(['\n    background-color: #ddd;\n    position: relative;\n    display: block;\n    width: ', ';\n    height: ', ';\n    ', ';\n    border: ', ';\n    z-index: 3;\n    overflow: hidden;\n    @media only screen and (max-width: 767.98px) and (min-width: 576px){\n      width: 250px;\n      height: 250px;\n    }\n    @media only screen and (max-width: 575.98px) {\n      width: 200px;\n      height: 200px;\n    }\n    @media only screen and (max-width: 479.98px) {\n      margin: 0px auto\n    }\n'], ['\n    background-color: #ddd;\n    position: relative;\n    display: block;\n    width: ', ';\n    height: ', ';\n    ', ';\n    border: ', ';\n    z-index: 3;\n    overflow: hidden;\n    @media only screen and (max-width: 767.98px) and (min-width: 576px){\n      width: 250px;\n      height: 250px;\n    }\n    @media only screen and (max-width: 575.98px) {\n      width: 200px;\n      height: 200px;\n    }\n    @media only screen and (max-width: 479.98px) {\n      margin: 0px auto\n    }\n']),
+    _templateObject3 = taggedTemplateLiteral(['\n    object-fit: cover;\n    position: absolute;\n    left: 50%;\n    transform: translate(-50%, 0%);\n    width: ', ';\n    height: ', ';\n    z-index: -1;\n    ', ';\n   \n    @media only screen and (max-width: 767.98px) and (min-width: 576px){\n      width: 250px;\n      height: 250px;\n    }\n    @media only screen and (max-width: 575.98px) {\n      width: 200px;\n      height: 200px;\n    }\n    @media only screen and (max-width: 479.98px) {\n      margin: 0px auto\n    }\n'], ['\n    object-fit: cover;\n    position: absolute;\n    left: 50%;\n    transform: translate(-50%, 0%);\n    width: ', ';\n    height: ', ';\n    z-index: -1;\n    ', ';\n   \n    @media only screen and (max-width: 767.98px) and (min-width: 576px){\n      width: 250px;\n      height: 250px;\n    }\n    @media only screen and (max-width: 575.98px) {\n      width: 200px;\n      height: 200px;\n    }\n    @media only screen and (max-width: 479.98px) {\n      margin: 0px auto\n    }\n']),
+    _templateObject4 = taggedTemplateLiteral(['\n    object-fit: cover;\n    position: absolute;\n    left: 50%;\n    ', ';\n    ', ';\n    width: ', ';\n    height: ', ';\n    z-index: -1;\n    ', ';\n   \n    @media only screen and (max-width: 767.98px) and (min-width: 457px){\n      width: ', ';\n      height: ', ';\n    }\n    @media only screen and (max-width: 456.98px) {\n      width: 200px;\n      height: 200px;\n    }\n'], ['\n    object-fit: cover;\n    position: absolute;\n    left: 50%;\n    ', ';\n    ', ';\n    width: ', ';\n    height: ', ';\n    z-index: -1;\n    ', ';\n   \n    @media only screen and (max-width: 767.98px) and (min-width: 457px){\n      width: ', ';\n      height: ', ';\n    }\n    @media only screen and (max-width: 456.98px) {\n      width: 200px;\n      height: 200px;\n    }\n']),
+    _templateObject5 = taggedTemplateLiteral(['\n    position : absolute;\n    top: 30%;\n    left: 0%;\n    width: 20px;\n    height: 20px;\n    z-index: 2;\n    cursor: pointer;\n   \n'], ['\n    position : absolute;\n    top: 30%;\n    left: 0%;\n    width: 20px;\n    height: 20px;\n    z-index: 2;\n    cursor: pointer;\n   \n']),
+    _templateObject6 = taggedTemplateLiteral(['\n    position : absolute;\n    top: 30%;\n    right: 0%;\n    width: 20px;\n    height: 20px;\n    z-index: 2;\n    cursor: pointer;\n'], ['\n    position : absolute;\n    top: 30%;\n    right: 0%;\n    width: 20px;\n    height: 20px;\n    z-index: 2;\n    cursor: pointer;\n']);
 
 function getBorderRadius(value) {
   return 'border-radius: ' + value + '%;';
@@ -7606,27 +7608,46 @@ var MasspaMenuLink = styled.a(_templateObject, function (props) {
 }, function (props) {
   return props.sizeImage * 2 + 'px';
 });
-var MasspaMenuImage = styled.img(_templateObject2, function (_ref2) {
-  var mode = _ref2.mode;
-  return mode === 1 ? "top:50%" : "top:0%";
+var MasspaMenuLink02 = styled.a(_templateObject2, function (props) {
+  return props.sizeImage + 'px';
+}, function (props) {
+  return props.sizeImage + 'px';
+}, function (_ref2) {
+  var borderRadius = _ref2.borderRadius;
+  return borderRadius === 'rounded' ? getBorderRadius(50) : 'border-radius: ' + borderRadius;
+}, function (props) {
+  return props.borderImage;
+});
+var MasspaMenuImage02 = styled.img(_templateObject3, function (props) {
+  return props.sizeImage + 'px';
+}, function (props) {
+  return props.sizeImage + 'px';
 }, function (_ref3) {
-  var mode = _ref3.mode;
+  var borderRadius = _ref3.borderRadius;
+  return borderRadius === 'rounded' ? getBorderRadius(50) : 'border-radius: ' + borderRadius;
+});
+
+var MasspaMenuImage = styled.img(_templateObject4, function (_ref4) {
+  var mode = _ref4.mode;
+  return mode === 1 ? "top:50%" : "top:0%";
+}, function (_ref5) {
+  var mode = _ref5.mode;
   return mode === 1 ? setImagePosition(1) : setImagePosition(2);
 }, function (props) {
   return props.sizeImage + 'px';
 }, function (props) {
   return props.sizeImage + 'px';
-}, function (_ref4) {
-  var borderRadius = _ref4.borderRadius;
+}, function (_ref6) {
+  var borderRadius = _ref6.borderRadius;
   return borderRadius === 'rounded' ? getBorderRadius(50) : 'border-radius: ' + borderRadius;
 }, function (props) {
   return props.sizeImage * 2 + 'px';
 }, function (props) {
   return props.sizeImage * 2 + 'px';
 });
-var ArrowLeft = styled.img(_templateObject3);
+var ArrowLeft = styled.img(_templateObject5);
 
-var ArrowRight = styled.img(_templateObject4);
+var ArrowRight = styled.img(_templateObject6);
 
 var MasspaItemCategory = function (_Component) {
   inherits$1(MasspaItemCategory, _Component);
@@ -7663,7 +7684,9 @@ var MasspaItemCategory = function (_Component) {
           borderImage = _props.borderImage,
           borderRadius = _props.borderRadius,
           mode = _props.mode,
-          animation = _props.animation;
+          animation = _props.animation,
+          layout = _props.layout,
+          colorTitle = _props.colorTitle;
 
       if (listItems.length !== 0) {
         var featuredItems = listItems.filter(function (item) {
@@ -7712,7 +7735,7 @@ var MasspaItemCategory = function (_Component) {
                               React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
+                                { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
                                 item.title
                               )
                             )
@@ -7732,7 +7755,7 @@ var MasspaItemCategory = function (_Component) {
                               React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
+                                { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
                                 item.title
                               )
                             )
@@ -7752,7 +7775,7 @@ var MasspaItemCategory = function (_Component) {
                               React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
+                                { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
                                 item.title
                               )
                             )
@@ -7772,7 +7795,7 @@ var MasspaItemCategory = function (_Component) {
                           ),
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
+                            { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
                             item.title
                           ),
                           item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
@@ -7788,7 +7811,7 @@ var MasspaItemCategory = function (_Component) {
                           ),
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
+                            { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
                             item.title
                           ),
                           item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
@@ -7804,7 +7827,7 @@ var MasspaItemCategory = function (_Component) {
                           ),
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
+                            { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
                             item.title
                           ),
                           item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
@@ -7827,7 +7850,7 @@ var MasspaItemCategory = function (_Component) {
                               React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
+                                { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
                                 item.title
                               )
                             )
@@ -7847,7 +7870,7 @@ var MasspaItemCategory = function (_Component) {
                               React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
+                                { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
                                 item.title
                               )
                             )
@@ -7867,7 +7890,7 @@ var MasspaItemCategory = function (_Component) {
                               React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
+                                { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
                                 item.title
                               )
                             )
@@ -7887,7 +7910,7 @@ var MasspaItemCategory = function (_Component) {
                           ),
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
+                            { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
                             item.title
                           ),
                           item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
@@ -7903,7 +7926,7 @@ var MasspaItemCategory = function (_Component) {
                           ),
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
+                            { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
                             item.title
                           ),
                           item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
@@ -7919,7 +7942,7 @@ var MasspaItemCategory = function (_Component) {
                           ),
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
+                            { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
                             item.title
                           ),
                           item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
@@ -7933,284 +7956,661 @@ var MasspaItemCategory = function (_Component) {
               React.createElement(ArrowRight, { src: imgArrowRight, onClick: this.nextMenuCategory })
             );
           } else {
+
             return React.createElement(
               'div',
-              { className: 'row w-100' },
+              { className: 'row no-gutters' },
               featuredItems.map(function (item, i) {
                 if (item.image === "" || item.image === null) {
-                  if (mode === 2) {
-                    if (animation === 'zoom') {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                  if (layout === 2) {
+                    //dang dac biet
+                    if (mode === 2) {
+                      if (animation === 'zoom') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
+                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
                           React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                            'div',
+                            { className: 'masspa-item-category-card fade-in-left' },
                             React.createElement(
-                              'span',
-                              { className: 'masspa-item-category-overlay-2' },
-                              React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              'div',
+                              { className: 'col-md-5 col-sm-5' },
+                              React.createElement(
+                                MasspaMenuLink,
+                                { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                                React.createElement(
+                                  'span',
+                                  { className: 'masspa-item-category-overlay-2' },
+                                  React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React.createElement(
+                                    'div',
+                                    { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                    item.title
+                                  )
+                                )
+                              )
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-7 col-sm-7' },
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
-                                item.title
+                                { className: 'masspa-item-category-group-title-text' },
+                                item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
                               )
                             )
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
-                    } else if (animation === 'rotate') {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                          )
+                        );
+                      } else if (animation === 'rotate') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
+                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
                           React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
+                            'div',
+                            { className: 'masspa-item-category-card fade-in-left' },
                             React.createElement(
-                              'span',
-                              { className: 'masspa-item-category-overlay-2' },
-                              React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              'div',
+                              { className: 'col-md-5 col-sm-5' },
+                              React.createElement(
+                                MasspaMenuLink,
+                                { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
+                                React.createElement(
+                                  'span',
+                                  { className: 'masspa-item-category-overlay-2' },
+                                  React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React.createElement(
+                                    'div',
+                                    { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                    item.title
+                                  )
+                                )
+                              )
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-7 col-sm-7' },
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
-                                item.title
+                                { className: 'masspa-item-category-group-title-text' },
+                                item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
                               )
                             )
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
+                          )
+                        );
+                      } else {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-card fade-in-left' },
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-5 col-sm-5' },
+                              React.createElement(
+                                MasspaMenuLink,
+                                { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
+                                React.createElement(
+                                  'span',
+                                  { className: 'masspa-item-category-overlay-2' },
+                                  React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React.createElement(
+                                    'div',
+                                    { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                    item.title
+                                  )
+                                )
+                              )
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-7 col-sm-7' },
+                              React.createElement(
+                                'div',
+                                { className: 'masspa-item-category-group-title-text' },
+                                item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                              )
+                            )
+                          )
+                        );
+                      }
                     } else {
                       return React.createElement(
                         'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                        { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
                         React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
+                          { className: 'masspa-item-category-card fade-in-left' },
                           React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
+                            'div',
+                            { className: 'col-md-5 col-sm-5' },
                             React.createElement(
-                              'span',
-                              { className: 'masspa-item-category-overlay-2' },
-                              React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
-                              React.createElement(
-                                'div',
-                                { className: 'masspa-item-category-title-2' },
-                                item.title
-                              )
+                              MasspaMenuLink02,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                              React.createElement(MasspaMenuImage02, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
                             )
                           ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          React.createElement(
+                            'div',
+                            { className: 'col-md-7 col-sm-7' },
+                            React.createElement(
+                              'div',
+                              { className: 'masspa-item-category-group-title-text' },
+                              React.createElement(
+                                'a',
+                                { href: link },
+                                React.createElement(
+                                  'span',
+                                  { className: 'masspa-item-category-title-3', style: { color: '' + colorTitle } },
+                                  item.title
+                                )
+                              ),
+                              item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                            )
+                          )
                         )
                       );
                     }
                   } else {
-                    if (animation === 'zoom') {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                    if (mode === 2) {
+                      if (animation === 'zoom') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
-                          React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                            React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
-                          ),
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
-                            item.title
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
-                    } else if (animation === 'rotate') {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                              React.createElement(
+                                'span',
+                                { className: 'masspa-item-category-overlay-2' },
+                                React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React.createElement(
+                                  'div',
+                                  { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                  item.title
+                                )
+                              )
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      } else if (animation === 'rotate') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
-                          React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                            React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
-                          ),
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
-                            item.title
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
+                              React.createElement(
+                                'span',
+                                { className: 'masspa-item-category-overlay-2' },
+                                React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React.createElement(
+                                  'div',
+                                  { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                  item.title
+                                )
+                              )
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      } else {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
+                              React.createElement(
+                                'span',
+                                { className: 'masspa-item-category-overlay-2' },
+                                React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React.createElement(
+                                  'div',
+                                  { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                  item.title
+                                )
+                              )
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      }
                     } else {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                      if (animation === 'zoom') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
-                          React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                            React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
-                          ),
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
-                            item.name
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                              React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
+                              item.title
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      } else if (animation === 'rotate') {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
+                              React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
+                              item.title
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      } else {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
+                              React.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
+                              item.title
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      }
                     }
                   }
                 } else {
-                  if (mode === 2) {
-                    if (animation === 'zoom') {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                  if (layout === 2) {
+                    //dang dac biet
+                    if (mode === 2) {
+                      if (animation === 'zoom') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
+                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
                           React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                            'div',
+                            { className: 'masspa-item-category-card fade-in-left' },
                             React.createElement(
-                              'span',
-                              { className: 'masspa-item-category-overlay-2' },
-                              React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              'div',
+                              { className: 'col-md-5 col-sm-5' },
+                              React.createElement(
+                                MasspaMenuLink,
+                                { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                                React.createElement(
+                                  'span',
+                                  { className: 'masspa-item-category-overlay-2' },
+                                  React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React.createElement(
+                                    'div',
+                                    { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                    item.title
+                                  )
+                                )
+                              )
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-7 col-sm-7' },
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
-                                item.title
+                                { className: 'masspa-item-category-group-title-text' },
+                                item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
                               )
                             )
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
-                    } else if (animation === 'rotate') {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                          )
+                        );
+                      } else if (animation === 'rotate') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
+                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
                           React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
+                            'div',
+                            { className: 'masspa-item-category-card fade-in-left' },
                             React.createElement(
-                              'span',
-                              { className: 'masspa-item-category-overlay-2' },
-                              React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              'div',
+                              { className: 'col-md-5 col-sm-5' },
+                              React.createElement(
+                                MasspaMenuLink,
+                                { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
+                                React.createElement(
+                                  'span',
+                                  { className: 'masspa-item-category-overlay-2' },
+                                  React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React.createElement(
+                                    'div',
+                                    { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                    item.title
+                                  )
+                                )
+                              )
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-7 col-sm-7' },
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
-                                item.title
+                                { className: 'masspa-item-category-group-title-text' },
+                                item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
                               )
                             )
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
+                          )
+                        );
+                      } else {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-card fade-in-left' },
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-5 col-sm-5' },
+                              React.createElement(
+                                MasspaMenuLink,
+                                { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
+                                React.createElement(
+                                  'span',
+                                  { className: 'masspa-item-category-overlay-2' },
+                                  React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React.createElement(
+                                    'div',
+                                    { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                    item.title
+                                  )
+                                )
+                              )
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-7 col-sm-7' },
+                              React.createElement(
+                                'div',
+                                { className: 'masspa-item-category-group-title-text' },
+                                item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                              )
+                            )
+                          )
+                        );
+                      }
                     } else {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                      if (animation === 'zoom') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
+                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
                           React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
+                            'div',
+                            { className: 'masspa-item-category-card fade-in-left' },
                             React.createElement(
-                              'span',
-                              { className: 'masspa-item-category-overlay-2' },
-                              React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              'div',
+                              { className: 'col-md-5 col-sm-5' },
+                              React.createElement(
+                                MasspaMenuLink02,
+                                { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                                React.createElement(MasspaMenuImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                              )
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-7 col-sm-7' },
                               React.createElement(
                                 'div',
-                                { className: 'masspa-item-category-title-2' },
-                                item.title
+                                { className: 'masspa-item-category-group-title-text' },
+                                React.createElement(
+                                  'a',
+                                  { href: link },
+                                  React.createElement(
+                                    'span',
+                                    { className: 'masspa-item-category-title-3', style: { color: '' + colorTitle } },
+                                    item.title
+                                  )
+                                ),
+                                item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
                               )
                             )
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
+                          )
+                        );
+                      } else if (animation === 'rotate') {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-card fade-in-left' },
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-5 col-sm-5' },
+                              React.createElement(
+                                MasspaMenuLink02,
+                                { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
+                                React.createElement(MasspaMenuImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                              )
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-7 col-sm-7' },
+                              React.createElement(
+                                'div',
+                                { className: 'masspa-item-category-group-title-text' },
+                                React.createElement(
+                                  'a',
+                                  { href: link },
+                                  React.createElement(
+                                    'span',
+                                    { className: 'masspa-item-category-title-3', style: { color: '' + colorTitle } },
+                                    item.title
+                                  )
+                                ),
+                                item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                              )
+                            )
+                          )
+                        );
+                      } else {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-card fade-in-left' },
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-5 col-sm-5' },
+                              React.createElement(
+                                MasspaMenuLink02,
+                                { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
+                                React.createElement(MasspaMenuImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                              )
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'col-md-7 col-sm-7' },
+                              React.createElement(
+                                'div',
+                                { className: 'masspa-item-category-group-title-text' },
+                                React.createElement(
+                                  'a',
+                                  { href: link },
+                                  React.createElement(
+                                    'span',
+                                    { className: 'masspa-item-category-title-3', style: { color: '' + colorTitle } },
+                                    item.title
+                                  )
+                                ),
+                                item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text-layout02', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                              )
+                            )
+                          )
+                        );
+                      }
                     }
                   } else {
-                    if (animation === 'zoom') {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                    if (mode === 2) {
+                      if (animation === 'zoom') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
-                          React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                            React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
-                          ),
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
-                            item.title
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
-                    } else if (animation === 'rotate') {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                              React.createElement(
+                                'span',
+                                { className: 'masspa-item-category-overlay-2' },
+                                React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React.createElement(
+                                  'div',
+                                  { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                  item.title
+                                )
+                              )
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      } else if (animation === 'rotate') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
-                          React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                            React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
-                          ),
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
-                            item.title
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
+                              React.createElement(
+                                'span',
+                                { className: 'masspa-item-category-overlay-2' },
+                                React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React.createElement(
+                                  'div',
+                                  { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                  item.title
+                                )
+                              )
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      } else {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
+                              React.createElement(
+                                'span',
+                                { className: 'masspa-item-category-overlay-2' },
+                                React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React.createElement(
+                                  'div',
+                                  { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
+                                  item.title
+                                )
+                              )
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      }
                     } else {
-                      return React.createElement(
-                        'div',
-                        { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
-                        React.createElement(
+                      if (animation === 'zoom') {
+                        return React.createElement(
                           'div',
-                          { className: 'masspa-item-category-container' },
-                          React.createElement(
-                            MasspaMenuLink,
-                            { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                            React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
-                          ),
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
                           React.createElement(
                             'div',
-                            { className: 'masspa-item-category-title-1' },
-                            item.name
-                          ),
-                          item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
-                        )
-                      );
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
+                              React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
+                              item.title
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      } else if (animation === 'rotate') {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
+                              React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
+                              item.title
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      } else {
+                        return React.createElement(
+                          'div',
+                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          React.createElement(
+                            'div',
+                            { className: 'masspa-item-category-container' },
+                            React.createElement(
+                              MasspaMenuLink,
+                              { href: link, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
+                              React.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            ),
+                            React.createElement(
+                              'div',
+                              { className: 'masspa-item-category-title-1', style: { color: '' + colorTitle } },
+                              item.title
+                            ),
+                            item.description !== null ? React.createElement('div', { className: 'masspa-item-category-text', dangerouslySetInnerHTML: { __html: '' + item.description } }) : React.createElement('div', null)
+                          )
+                        );
+                      }
                     }
                   }
                 }
@@ -8235,7 +8635,9 @@ MasspaItemCategory.propTypes = {
   borderImage: PropTypes.string.isRequired,
   borderRadius: PropTypes.string.isRequired,
   mode: PropTypes.number.isRequired,
-  animation: PropTypes.string.isRequired
+  animation: PropTypes.string.isRequired,
+  layout: PropTypes.number.isRequired,
+  colorTitle: PropTypes.string.isRequired
 };
 
 
@@ -8246,7 +8648,9 @@ MasspaItemCategory.defaultProps = {
   borderImage: 'none',
   borderRadius: '49px 49px 49px 0',
   mode: 1,
-  animation: 'zoom'
+  animation: 'zoom',
+  layout: 1,
+  colorTitle: "#fd7400"
 };
 
 export default MasspaItemCategory;

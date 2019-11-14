@@ -123,14 +123,35 @@ let data=[
     textSearch: "dieu-tri-da-nam-tron-goi",
     title: "Điều Trị Da Nám (Trọn Gói)",
     updatedAt: 1573114182195
-  }
+  },
+  {
+    code: "",
+    createdAt: 1569384642935,
+    currencyCode: "VND",
+    description: "<p><span >Điều trị da nám bằng công nghệ cao triệt tận gốc nám bằng thuốc đặc trị </span></p>",
+    featured: 0,
+    image: "https://storage.googleapis.com/masspa-152306.appspot.com/myServices/0548caa0-a47b-11e9-b6ea-cd470457ddbc/menu-item/0548caa0-a47b-11e9-b6ea-cd470457ddbc_1571040630381.jpg",
+    isShowPrice: 1,
+    itemCode: "ce4391dd-d7b0-4b61-886a-c7bb0251034d",
+    itemTime: 120,
+    menuId: "['7393451f-7553-48e4-a3d3-361df214d11c']",
+    position: 6,
+    price: 30000000,
+    priceShow: 30000000,
+    serviceCode: "0548caa0-a47b-11e9-b6ea-cd470457ddbc",
+    showOnShop: 1,
+    textSearch: "dieu-tri-da-nam-tron-goi",
+    title: "Điều Trị Da Nám (Trọn Gói)",
+    updatedAt: 1573114182195
+  },
+
 ]
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <MasspaItemCategory listItems={data} borderImage="5px solid #ddd" sizeImage={180} mode={1}  animation="rotate"/>
+        <MasspaItemCategory listItems={data} borderRadius="rounded" borderImage="5px solid #ddd" sizeImage={180} mode={1}  animation="rotate" layout={1} colorTitle="red"/>
       </div>
     )
   }
