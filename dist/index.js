@@ -35,7 +35,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css = "/* add css styles here (optional) */\r\n*,\r\n*::before,\r\n*::after {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  font-family: sans-serif;\r\n  line-height: 1.15;\r\n  -webkit-text-size-adjust: 100%;\r\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n}\r\n\r\na{\r\n  text-decoration: unset;\r\n}\r\n\r\n.row {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-wrap: wrap;\r\n  flex-wrap: wrap;\r\n  margin-right: -15px;\r\n  margin-left: -15px;\r\n}\r\n\r\n.no-gutters {\r\n  margin-right: 0;\r\n  margin-left: 0;\r\n}\r\n\r\n.no-gutters > .col,\r\n.no-gutters > [class*=\"col-\"] {\r\n  padding-right: 0;\r\n  padding-left: 0;\r\n}\r\n\r\n.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,\r\n.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,\r\n.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,\r\n.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,\r\n.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,\r\n.col-xl-auto {\r\n  position: relative;\r\n  width: 100%;\r\n  padding-right: 15px;\r\n  padding-left: 15px;\r\n}\r\n\r\n.col {\r\n  -ms-flex-preferred-size: 0;\r\n  flex-basis: 0;\r\n  -ms-flex-positive: 1;\r\n  flex-grow: 1;\r\n  max-width: 100%;\r\n}\r\n\r\n.col-auto {\r\n  -ms-flex: 0 0 auto;\r\n  flex: 0 0 auto;\r\n  width: auto;\r\n  max-width: 100%;\r\n}\r\n\r\n.col-1 {\r\n  -ms-flex: 0 0 8.333333%;\r\n  flex: 0 0 8.333333%;\r\n  max-width: 8.333333%;\r\n}\r\n\r\n.col-2 {\r\n  -ms-flex: 0 0 16.666667%;\r\n  flex: 0 0 16.666667%;\r\n  max-width: 16.666667%;\r\n}\r\n\r\n.col-3 {\r\n  -ms-flex: 0 0 25%;\r\n  flex: 0 0 25%;\r\n  max-width: 25%;\r\n}\r\n\r\n.col-4 {\r\n  -ms-flex: 0 0 33.333333%;\r\n  flex: 0 0 33.333333%;\r\n  max-width: 33.333333%;\r\n}\r\n\r\n.col-5 {\r\n  -ms-flex: 0 0 41.666667%;\r\n  flex: 0 0 41.666667%;\r\n  max-width: 41.666667%;\r\n}\r\n\r\n.col-6 {\r\n  -ms-flex: 0 0 50%;\r\n  flex: 0 0 50%;\r\n  max-width: 50%;\r\n}\r\n\r\n.col-7 {\r\n  -ms-flex: 0 0 58.333333%;\r\n  flex: 0 0 58.333333%;\r\n  max-width: 58.333333%;\r\n}\r\n\r\n.col-8 {\r\n  -ms-flex: 0 0 66.666667%;\r\n  flex: 0 0 66.666667%;\r\n  max-width: 66.666667%;\r\n}\r\n\r\n.col-9 {\r\n  -ms-flex: 0 0 75%;\r\n  flex: 0 0 75%;\r\n  max-width: 75%;\r\n}\r\n\r\n.col-10 {\r\n  -ms-flex: 0 0 83.333333%;\r\n  flex: 0 0 83.333333%;\r\n  max-width: 83.333333%;\r\n}\r\n\r\n.col-11 {\r\n  -ms-flex: 0 0 91.666667%;\r\n  flex: 0 0 91.666667%;\r\n  max-width: 91.666667%;\r\n}\r\n\r\n.col-12 {\r\n  -ms-flex: 0 0 100%;\r\n  flex: 0 0 100%;\r\n  max-width: 100%;\r\n}\r\n.w-100{\r\n  width: 100%;\r\n}\r\n\r\np{\r\n  margin:0px;\r\n}\r\n.masspa-item-category-title-3{font-size:22px;line-height:25px;font-weight:300;font-family:open sans,sans-serif; text-align: left; color: #000000;}\r\n\r\n.masspa-item-category-slide-container{\r\n  position: relative;\r\n}\r\n.masspa-item-category-container{\r\n  display: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n  align-items: center;\r\n  padding: 40px 0px;\r\n}\r\n\r\n.masspa-item-category-title-1{\r\n    color: #141517;\r\n    line-height: 22px;\r\n  \r\n    margin-bottom: 0;\r\n    text-align: center;\r\n    text-transform: uppercase;\r\n}\r\n.masspa-item-category-title-2{\r\n  color: #ffffff;\r\n  line-height: 22px;\r\n  margin-bottom: 0;\r\n  text-align: center;\r\n  font-weight: 400;\r\n  text-transform: uppercase;\r\n  height: 100%;\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.masspa-item-category-text{\r\n  height: 78px;\r\n  overflow: hidden;\r\n}\r\n\r\n.masspa-item-category-text-layout02 p , .masspa-item-category-text-layout02 p span,  .masspa-item-category-text-layout02 span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 50px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 2;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n  font-size: 15px;\r\n  padding: 0px;\r\n}\r\n\r\n.masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 70px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 3;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n  text-align: center;\r\n}\r\n\r\n.masspa-item-category-overlay-2{\r\n  position: absolute;\r\n  background-image:  linear-gradient(to bottom, rgba(255,0,0,0), rgba(40,40,40,1));\r\n  bottom: 0;\r\n  height: 40%;\r\n  width: inherit;\r\n  display: inline-block;\r\n}\r\n\r\n.masspa-item-category-zoom, .masspa-item-category-rotate{\r\n  -webkit-transition: all .5s;\r\n  -moz-transition: all .5s;\r\n  -o-transition: all .5s;\r\n  transition: all .5s;\r\n}\r\n.masspa-item-category-zoom:hover , .masspa-item-category-zoom:focus {\r\n  -ms-transform: scale(1.2);\r\n  -moz-transform: scale(1.2);\r\n  -webkit-transform: scale(1.2);\r\n  -o-transform: scale(1.2);\r\n  transform: scale(1.2);\r\n}\r\n\r\n.masspa-item-category-rotate:hover , .masspa-item-category-rotate:focus{\r\n  -ms-transform: rotate(360deg);\r\n  -moz-transform: rotate(360deg);\r\n  -webkit-transform: rotate(360deg);\r\n  -o-transform: rotate(360deg);\r\n  transform: rotate(360deg);\r\n}\r\n\r\n\r\n@media only screen and (min-width: 768px){\r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span {\r\n    font-size: 14px;\r\n  }\r\n  .masspa-item-category-title-1{\r\n    font-size: 18px;\r\n    padding: 30px 8px 5px;\r\n  }\r\n  .masspa-item-category-title-2{\r\n    font-size: 15px;\r\n    padding: 16px 8px;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) {\r\n  .masspa-item-category-title-1{\r\n    font-size: 20px;\r\n    padding: 30px 8px 5px;\r\n  }\r\n \r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n    font-size: 14px;\r\n  }\r\n\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) and (min-width: 457px){\r\n  .masspa-item-category-title-2{\r\n    font-size: 18px;\r\n    padding: 40px 15px 0px;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 456.98px) {\r\n  .masspa-item-category-title-2{\r\n    font-size: 15px;\r\n    padding: 15px 15px 0px;\r\n  }\r\n  .masspa-item-category-text{\r\n    padding-top: 20px;\r\n  }\r\n}\r\n\r\n@media (min-width: 576px) {\r\n  .col-sm {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-grow: 1;\r\n    max-width: 100%;\r\n  }\r\n  .col-sm-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .col-sm-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .col-sm-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .col-sm-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .col-sm-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .col-sm-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .col-sm-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .col-sm-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .col-sm-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .col-sm-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .col-sm-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .col-sm-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .col-sm-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  .col-md {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-grow: 1;\r\n    max-width: 100%;\r\n  }\r\n  .col-md-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .col-md-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .col-md-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .col-md-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .col-md-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .col-md-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .col-md-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .col-md-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .col-md-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .col-md-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .col-md-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .col-md-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .col-md-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n@media (min-width: 992px) {\r\n  .col-lg {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-grow: 1;\r\n    max-width: 100%;\r\n  }\r\n  .col-lg-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .col-lg-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .col-lg-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .col-lg-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .col-lg-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .col-lg-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .col-lg-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .col-lg-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .col-lg-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .col-lg-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .col-lg-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .col-lg-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .col-lg-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .col-xl {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-grow: 1;\r\n    max-width: 100%;\r\n  }\r\n  .col-xl-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .col-xl-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .col-xl-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .col-xl-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .col-xl-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .col-xl-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .col-xl-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .col-xl-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .col-xl-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .col-xl-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .col-xl-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .col-xl-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .col-xl-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media screen and (min-width:992px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n  }\r\n}\r\n@media screen  and (min-width:576px) and (max-width:991px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 30px;\r\n  }\r\n}\r\n\r\n@media screen  and (min-width:480px) and (max-width:575.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n  }\r\n}\r\n\r\n@media screen  and (max-width:479.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n    padding-top: 20px;\r\n    text-align: center;\r\n  }\r\n  .masspa-item-category-text-layout02{\r\n    padding-top: 20px;\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 240px) and (max-width:767.98px) {\r\n .col-xs-6{flex:0 0 100%;max-width:100%}\r\n  }\r\n\r\n  @media screen and (min-width: 1024px) {\r\n    .col-xs-6{flex:0 0 50%!important;max-width:50%!important}\r\n  }\r\n \r\n  @media screen and (min-width: 240px) {\r\n      .masspa-item-category-card{padding:15px 0}\r\n      .masspa-item-category-card{display:flex;flex-direction:column;justify-content:center;align-items:center}\r\n  }\r\n\r\n  @media screen and (min-width: 480px) {\r\n    .masspa-item-category-card{display:flex;flex-direction:row;justify-content:unset}\r\n  }";
+var css = "/* add css styles here (optional) */\r\n*,\r\n*::before,\r\n*::after {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  font-family: sans-serif;\r\n  line-height: 1.15;\r\n  -webkit-text-size-adjust: 100%;\r\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n}\r\n\r\na{\r\n  text-decoration: unset;\r\n}\r\n\r\n.ms-item-category-row {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-wrap: wrap;\r\n  flex-wrap: wrap;\r\n  margin-right: -15px;\r\n  margin-left: -15px;\r\n}\r\n\r\n.ms-item-category-no-gutter {\r\n  margin-right: 0;\r\n  margin-left: 0;\r\n}\r\n\r\n\r\n.ms-item-category-col-1, .ms-item-category-col-2, .ms-item-category-col-3, .ms-item-category-col-4, .ms-item-category-col-5, .ms-item-category-col-6, .ms-item-category-col-7, .ms-item-category-col-8, .ms-item-category-col-9, .ms-item-category-col-10, .ms-item-category-col-11, .ms-item-category-col-12, .ms-item-category-col,\r\n.ms-item-category-col-auto, .ms-item-category-col-sm-1, .ms-item-category-col-sm-2, .ms-item-category-col-sm-3, .ms-item-category-col-sm-4, .ms-item-category-col-sm-5, .ms-item-category-col-sm-6, .ms-item-category-col-sm-7, .ms-item-category-col-sm-8, .ms-item-category-col-sm-9, .ms-item-category-col-sm-10, .ms-item-category-col-sm-11, .ms-item-category-col-sm-12, .ms-item-category-col-sm,\r\n.ms-item-category-col-sm-auto, .ms-item-category-col-md-1, .ms-item-category-col-md-2, .ms-item-category-col-md-3, .ms-item-category-col-md-4, .ms-item-category-col-md-5, .ms-item-category-col-md-6, .ms-item-category-col-md-7, .ms-item-category-col-md-8, .ms-item-category-col-md-9, .ms-item-category-col-md-10, .ms-item-category-col-md-11, .ms-item-category-col-md-12, .ms-item-category-col-md,\r\n.ms-item-category-col-md-auto, .ms-item-category-col-lg-1, .ms-item-category-col-lg-2, .ms-item-category-col-lg-3, .ms-item-category-col-lg-4, .ms-item-category-col-lg-5, .ms-item-category-col-lg-6, .ms-item-category-col-lg-7, .ms-item-category-col-lg-8, .ms-item-category-col-lg-9, .ms-item-category-col-lg-10, .ms-item-category-col-lg-11, .ms-item-category-col-lg-12, .ms-item-category-col-lg,\r\n.ms-item-category-col-lg-auto, .ms-item-category-col-xl-1, .ms-item-category-col-xl-2, .ms-item-category-col-xl-3, .ms-item-category-col-xl-4, .ms-item-category-col-xl-5, .ms-item-category-col-xl-6, .ms-item-category-col-xl-7, .ms-item-category-col-xl-8, .ms-item-category-col-xl-9, .ms-item-category-col-xl-10, .ms-item-category-col-xl-11, .ms-item-category-col-xl-12, .ms-item-category-col-xl,\r\n.ms-item-category-col-xl-auto {\r\n  position: relative;\r\n  width: 100%;\r\n  padding-right: 15px;\r\n  padding-left: 15px;\r\n}\r\n\r\n.ms-item-category-col {\r\n  -ms-flex-preferred-size: 0;\r\n  flex-basis: 0;\r\n  -ms-flex-positive: 1;\r\n  flex-gms-item-category-row: 1;\r\n  max-width: 100%;\r\n}\r\n\r\n.ms-item-category-col-auto {\r\n  -ms-flex: 0 0 auto;\r\n  flex: 0 0 auto;\r\n  width: auto;\r\n  max-width: 100%;\r\n}\r\n\r\n.ms-item-category-col-1 {\r\n  -ms-flex: 0 0 8.333333%;\r\n  flex: 0 0 8.333333%;\r\n  max-width: 8.333333%;\r\n}\r\n\r\n.ms-item-category-col-2 {\r\n  -ms-flex: 0 0 16.666667%;\r\n  flex: 0 0 16.666667%;\r\n  max-width: 16.666667%;\r\n}\r\n\r\n.ms-item-category-col-3 {\r\n  -ms-flex: 0 0 25%;\r\n  flex: 0 0 25%;\r\n  max-width: 25%;\r\n}\r\n\r\n.ms-item-category-col-4 {\r\n  -ms-flex: 0 0 33.333333%;\r\n  flex: 0 0 33.333333%;\r\n  max-width: 33.333333%;\r\n}\r\n\r\n.ms-item-category-col-5 {\r\n  -ms-flex: 0 0 41.666667%;\r\n  flex: 0 0 41.666667%;\r\n  max-width: 41.666667%;\r\n}\r\n\r\n.ms-item-category-col-6 {\r\n  -ms-flex: 0 0 50%;\r\n  flex: 0 0 50%;\r\n  max-width: 50%;\r\n}\r\n\r\n.ms-item-category-col-7 {\r\n  -ms-flex: 0 0 58.333333%;\r\n  flex: 0 0 58.333333%;\r\n  max-width: 58.333333%;\r\n}\r\n\r\n.ms-item-category-col-8 {\r\n  -ms-flex: 0 0 66.666667%;\r\n  flex: 0 0 66.666667%;\r\n  max-width: 66.666667%;\r\n}\r\n\r\n.ms-item-category-col-9 {\r\n  -ms-flex: 0 0 75%;\r\n  flex: 0 0 75%;\r\n  max-width: 75%;\r\n}\r\n\r\n.ms-item-category-col-10 {\r\n  -ms-flex: 0 0 83.333333%;\r\n  flex: 0 0 83.333333%;\r\n  max-width: 83.333333%;\r\n}\r\n\r\n.ms-item-category-col-11 {\r\n  -ms-flex: 0 0 91.666667%;\r\n  flex: 0 0 91.666667%;\r\n  max-width: 91.666667%;\r\n}\r\n\r\n.ms-item-category-col-12 {\r\n  -ms-flex: 0 0 100%;\r\n  flex: 0 0 100%;\r\n  max-width: 100%;\r\n}\r\n.w-100{\r\n  width: 100%;\r\n}\r\n\r\np{\r\n  margin:0px;\r\n}\r\n.masspa-item-category-title-3{font-size:22px;line-height:25px;font-weight:300;font-family:open sans,sans-serif; text-align: left; color: #000000;}\r\n\r\n.masspa-item-category-slide-container{\r\n  position: relative;\r\n}\r\n.masspa-item-category-container{\r\n  display: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n  align-items: center;\r\n  padding: 40px 0px;\r\n}\r\n\r\n.masspa-item-category-title-1{\r\n    color: #141517;\r\n    line-height: 22px;\r\n  \r\n    margin-bottom: 0;\r\n    text-align: center;\r\n    text-transform: uppercase;\r\n}\r\n.masspa-item-category-title-2{\r\n  color: #ffffff;\r\n  line-height: 22px;\r\n  margin-bottom: 0;\r\n  text-align: center;\r\n  font-weight: 400;\r\n  text-transform: uppercase;\r\n  height: 100%;\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.masspa-item-category-text{\r\n  height: 78px;\r\n  overflow: hidden;\r\n}\r\n\r\n.masspa-item-category-text-layout02 p , .masspa-item-category-text-layout02 p span,  .masspa-item-category-text-layout02 span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 50px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 2;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n  font-size: 15px;\r\n  padding: 0px;\r\n}\r\n\r\n.masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 70px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 3;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n  text-align: center;\r\n}\r\n\r\n.masspa-item-category-overlay-2{\r\n  position: absolute;\r\n  background-image:  linear-gradient(to bottom, rgba(255,0,0,0), rgba(40,40,40,1));\r\n  bottom: 0;\r\n  height: 40%;\r\n  width: inherit;\r\n  display: inline-block;\r\n}\r\n\r\n.masspa-item-category-zoom, .masspa-item-category-rotate{\r\n  -webkit-transition: all .5s;\r\n  -moz-transition: all .5s;\r\n  -o-transition: all .5s;\r\n  transition: all .5s;\r\n}\r\n.masspa-item-category-zoom:hover , .masspa-item-category-zoom:focus {\r\n  -ms-transform: scale(1.2);\r\n  -moz-transform: scale(1.2);\r\n  -webkit-transform: scale(1.2);\r\n  -o-transform: scale(1.2);\r\n  transform: scale(1.2);\r\n}\r\n\r\n.masspa-item-category-rotate:hover , .masspa-item-category-rotate:focus{\r\n  -ms-transform: rotate(360deg);\r\n  -moz-transform: rotate(360deg);\r\n  -webkit-transform: rotate(360deg);\r\n  -o-transform: rotate(360deg);\r\n  transform: rotate(360deg);\r\n}\r\n\r\n\r\n@media only screen and (min-width: 768px){\r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span {\r\n    font-size: 14px;\r\n  }\r\n  .masspa-item-category-title-1{\r\n    font-size: 18px;\r\n    padding: 30px 8px 5px;\r\n  }\r\n  .masspa-item-category-title-2{\r\n    font-size: 15px;\r\n    padding: 16px 8px;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) {\r\n  .masspa-item-category-title-1{\r\n    font-size: 20px;\r\n    padding: 30px 8px 5px;\r\n  }\r\n \r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n    font-size: 14px;\r\n  }\r\n\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) and (min-width: 457px){\r\n  .masspa-item-category-title-2{\r\n    font-size: 18px;\r\n    padding: 40px 15px 0px;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 456.98px) {\r\n  .masspa-item-category-title-2{\r\n    font-size: 15px;\r\n    padding: 15px 15px 0px;\r\n  }\r\n  .masspa-item-category-text{\r\n    padding-top: 20px;\r\n  }\r\n}\r\n\r\n@media (min-width: 576px) {\r\n  .ms-item-category-col-sm {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-category-col-sm-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-category-col-sm-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-category-col-sm-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-category-col-sm-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-category-col-sm-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-category-col-sm-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-category-col-sm-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-category-col-sm-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-category-col-sm-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-category-col-sm-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-category-col-sm-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-category-col-sm-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-category-col-sm-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  .ms-item-category-col-md {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-category-col-md-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-category-col-md-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-category-col-md-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-category-col-md-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-category-col-md-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-category-col-md-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-category-col-md-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-category-col-md-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-category-col-md-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-category-col-md-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-category-col-md-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-category-col-md-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-category-col-md-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n@media (min-width: 992px) {\r\n  .ms-item-category-col-lg {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-category-col-lg-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-category-col-lg-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-category-col-lg-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-category-col-lg-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-category-col-lg-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-category-col-lg-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-category-col-lg-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-category-col-lg-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-category-col-lg-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-category-col-lg-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-category-col-lg-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-category-col-lg-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-category-col-lg-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .ms-item-category-col-xl {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-category-col-xl-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-category-col-xl-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-category-col-xl-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-category-col-xl-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-category-col-xl-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-category-col-xl-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-category-col-xl-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-category-col-xl-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-category-col-xl-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-category-col-xl-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-category-col-xl-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-category-col-xl-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-category-col-xl-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media screen and (min-width:992px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n  }\r\n}\r\n@media screen  and (min-width:576px) and (max-width:991px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 30px;\r\n  }\r\n}\r\n\r\n@media screen  and (min-width:480px) and (max-width:575.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n  }\r\n}\r\n\r\n@media screen  and (max-width:479.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n    padding-top: 20px;\r\n    text-align: center;\r\n  }\r\n  .masspa-item-category-text-layout02{\r\n    padding-top: 20px;\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 240px) and (max-width:767.98px) {\r\n .ms-item-category-col-xs-6{flex:0 0 100%;max-width:100%}\r\n  }\r\n\r\n  @media screen and (min-width: 1024px) {\r\n    .ms-item-category-col-xs-6{flex:0 0 50%!important;max-width:50%!important}\r\n  }\r\n \r\n  @media screen and (min-width: 240px) {\r\n      .masspa-item-category-card{padding:15px 0}\r\n      .masspa-item-category-card{display:flex;flex-direction:column;justify-content:center;align-items:center}\r\n  }\r\n\r\n  @media screen and (min-width: 480px) {\r\n    .masspa-item-category-card{display:flex;flex-direction:ms-item-category-row;justify-content:unset}\r\n  }";
 styleInject(css);
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -7500,7 +7500,7 @@ React__default.createElement("path", {
   d: "M145.188 238.575l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1l-215.4-215.5z"
 });
 
-var imgArrowLeft = "data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%20477.175%20477.175%22%20style%3D%22enable-background%3Anew%200%200%20477.175%20477.175%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20d%3D%22M145.188%2C238.575l215.5-215.5c5.3-5.3%2C5.3-13.8%2C0-19.1s-13.8-5.3-19.1%2C0l-225.1%2C225.1c-5.3%2C5.3-5.3%2C13.8%2C0%2C19.1l225.1%2C225%20%20c2.6%2C2.6%2C6.1%2C4%2C9.5%2C4s6.9-1.3%2C9.5-4c5.3-5.3%2C5.3-13.8%2C0-19.1L145.188%2C238.575z%22%2F%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+var imgItemArrowLeft = "data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%20477.175%20477.175%22%20style%3D%22enable-background%3Anew%200%200%20477.175%20477.175%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20d%3D%22M145.188%2C238.575l215.5-215.5c5.3-5.3%2C5.3-13.8%2C0-19.1s-13.8-5.3-19.1%2C0l-225.1%2C225.1c-5.3%2C5.3-5.3%2C13.8%2C0%2C19.1l225.1%2C225%20%20c2.6%2C2.6%2C6.1%2C4%2C9.5%2C4s6.9-1.3%2C9.5-4c5.3-5.3%2C5.3-13.8%2C0-19.1L145.188%2C238.575z%22%2F%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
 var _ref$2 =
 /*#__PURE__*/
@@ -7508,7 +7508,7 @@ React__default.createElement("path", {
   d: "M360.731 229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"
 });
 
-var imgArrowRight = "data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%20477.175%20477.175%22%20style%3D%22enable-background%3Anew%200%200%20477.175%20477.175%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20d%3D%22M360.731%2C229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1%2C0s-5.3%2C13.8%2C0%2C19.1l215.5%2C215.5l-215.5%2C215.5%20%20c-5.3%2C5.3-5.3%2C13.8%2C0%2C19.1c2.6%2C2.6%2C6.1%2C4%2C9.5%2C4c3.4%2C0%2C6.9-1.3%2C9.5-4l225.1-225.1C365.931%2C242.875%2C365.931%2C234.275%2C360.731%2C229.075z%20%20%22%2F%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
+var imgItemArrowRight = "data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%20477.175%20477.175%22%20style%3D%22enable-background%3Anew%200%200%20477.175%20477.175%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%20%3Cpath%20d%3D%22M360.731%2C229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1%2C0s-5.3%2C13.8%2C0%2C19.1l215.5%2C215.5l-215.5%2C215.5%20%20c-5.3%2C5.3-5.3%2C13.8%2C0%2C19.1c2.6%2C2.6%2C6.1%2C4%2C9.5%2C4c3.4%2C0%2C6.9-1.3%2C9.5-4l225.1-225.1C365.931%2C242.875%2C365.931%2C234.275%2C360.731%2C229.075z%20%20%22%2F%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3Cg%3E%3C%2Fg%3E%3C%2Fsvg%3E";
 
 var classCallCheck$1 = function (instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -7600,7 +7600,7 @@ function setImagePosition(value) {
   }
 }
 
-var MasspaMenuLink01 = styled.a(_templateObject, function (props) {
+var MasspaItemLink01 = styled.a(_templateObject, function (props) {
   return props.sizeImage + 'px';
 }, function (props) {
   return props.sizeImage + 'px';
@@ -7614,7 +7614,7 @@ var MasspaMenuLink01 = styled.a(_templateObject, function (props) {
 }, function (props) {
   return props.sizeImage * 2 + 'px';
 });
-var MasspaMenuLink02 = styled.a(_templateObject2, function (props) {
+var MasspaItemLink02 = styled.a(_templateObject2, function (props) {
   return props.sizeImage + 'px';
 }, function (props) {
   return props.sizeImage + 'px';
@@ -7624,7 +7624,7 @@ var MasspaMenuLink02 = styled.a(_templateObject2, function (props) {
 }, function (props) {
   return props.borderImage;
 });
-var MasspaMenuLink03 = styled.div(_templateObject3, function (props) {
+var MasspaItemLink03 = styled.div(_templateObject3, function (props) {
   return props.sizeImage + 'px';
 }, function (props) {
   return props.sizeImage + 'px';
@@ -7634,7 +7634,7 @@ var MasspaMenuLink03 = styled.div(_templateObject3, function (props) {
 }, function (props) {
   return props.borderImage;
 });
-var MasspaMenuImage02 = styled.img(_templateObject4, function (props) {
+var MasspaItemImage02 = styled.img(_templateObject4, function (props) {
   return props.sizeImage + 'px';
 }, function (props) {
   return props.sizeImage + 'px';
@@ -7643,7 +7643,7 @@ var MasspaMenuImage02 = styled.img(_templateObject4, function (props) {
   return borderRadius === 'rounded' ? getBorderRadius(50) : 'border-radius: ' + borderRadius;
 });
 
-var MasspaMenuImage = styled.img(_templateObject5, function (_ref5) {
+var MasspaItemImage = styled.img(_templateObject5, function (_ref5) {
   var mode = _ref5.mode;
   return mode === 1 ? "top:50%" : "top:0%";
 }, function (_ref6) {
@@ -7661,9 +7661,9 @@ var MasspaMenuImage = styled.img(_templateObject5, function (_ref5) {
 }, function (props) {
   return props.sizeImage * 2 + 'px';
 });
-var ArrowLeft = styled.img(_templateObject6);
+var ItemArrowLeft = styled.img(_templateObject6);
 
-var ArrowRight = styled.img(_templateObject7);
+var ItemArrowRight = styled.img(_templateObject7);
 
 var MasspaItemCategory = function (_Component) {
   inherits$1(MasspaItemCategory, _Component);
@@ -7750,14 +7750,14 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7765,12 +7765,12 @@ var MasspaItemCategory = function (_Component) {
                               )
                             )
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7785,14 +7785,14 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7800,12 +7800,12 @@ var MasspaItemCategory = function (_Component) {
                               )
                             )
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7820,14 +7820,14 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7835,12 +7835,12 @@ var MasspaItemCategory = function (_Component) {
                               )
                             )
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7857,15 +7857,15 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                            React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                            React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ),
                           React__default.createElement(
                             'div',
@@ -7879,15 +7879,15 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                            React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                            React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ),
                           React__default.createElement(
                             'div',
@@ -7901,15 +7901,15 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                            React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                            React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ),
                           React__default.createElement(
                             'div',
@@ -7928,14 +7928,14 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7943,12 +7943,12 @@ var MasspaItemCategory = function (_Component) {
                               )
                             )
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7963,14 +7963,14 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7978,12 +7978,12 @@ var MasspaItemCategory = function (_Component) {
                               )
                             )
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -7998,14 +7998,14 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8013,12 +8013,12 @@ var MasspaItemCategory = function (_Component) {
                               )
                             )
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                             React__default.createElement(
                               'span',
                               { className: 'masspa-item-category-overlay-2' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8035,15 +8035,15 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                            React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                            React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ),
                           React__default.createElement(
                             'div',
@@ -8057,15 +8057,15 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                            React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                            React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ),
                           React__default.createElement(
                             'div',
@@ -8079,15 +8079,15 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           typeof navigate !== 'undefined' ? React__default.createElement(
-                            MasspaMenuLink03,
+                            MasspaItemLink03,
                             { onClick: function onClick() {
                                 return _this2.handleClickLink(item.itemCode, link);
                               }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                            React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ) : React__default.createElement(
-                            MasspaMenuLink01,
+                            MasspaItemLink01,
                             { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                            React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                            React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                           ),
                           React__default.createElement(
                             'div',
@@ -8101,14 +8101,14 @@ var MasspaItemCategory = function (_Component) {
                   }
                 })
               ),
-              React__default.createElement(ArrowLeft, { src: imgArrowLeft, onClick: this.previousMenuCategory }),
-              React__default.createElement(ArrowRight, { src: imgArrowRight, onClick: this.nextMenuCategory })
+              React__default.createElement(ItemArrowLeft, { src: imgItemArrowLeft, onClick: this.previousMenuCategory }),
+              React__default.createElement(ItemArrowRight, { src: imgItemArrowRight, onClick: this.nextMenuCategory })
             );
           } else {
 
             return React__default.createElement(
               'div',
-              { className: 'row no-gutters' },
+              { className: 'ms-item-category-row ms-item-category-no-gutter' },
               featuredItems.map(function (item, i) {
                 if (item.image === "" || item.image === null) {
                   if (layout === 2) {
@@ -8117,22 +8117,22 @@ var MasspaItemCategory = function (_Component) {
                       if (animation === 'zoom') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          { className: 'ms-item-category-col-md-6 col-sm-12 col-xs-6', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-card fade-in-left' },
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-5 col-sm-5' },
+                              { className: 'ms-item-category-col-md-5 col-sm-5' },
                               typeof navigate !== 'undefined' ? React__default.createElement(
-                                MasspaMenuLink03,
+                                MasspaItemLink03,
                                 { onClick: function onClick() {
                                     return _this2.handleClickLink(item.itemCode, link);
                                   }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8140,12 +8140,12 @@ var MasspaItemCategory = function (_Component) {
                                   )
                                 )
                               ) : React__default.createElement(
-                                MasspaMenuLink02,
+                                MasspaItemLink02,
                                 { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8156,7 +8156,7 @@ var MasspaItemCategory = function (_Component) {
                             ),
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-7 col-sm-7' },
+                              { className: 'ms-item-category-col-md-7 col-sm-7' },
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-group-title-text' },
@@ -8168,22 +8168,22 @@ var MasspaItemCategory = function (_Component) {
                       } else if (animation === 'rotate') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          { className: 'ms-item-category-col-md-6 col-sm-12 col-xs-6', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-card fade-in-left' },
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-5 col-sm-5' },
+                              { className: 'ms-item-category-col-md-5 col-sm-5' },
                               typeof navigate !== 'undefined' ? React__default.createElement(
-                                MasspaMenuLink03,
+                                MasspaItemLink03,
                                 { onClick: function onClick() {
                                     return _this2.handleClickLink(item.itemCode, link);
                                   }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8191,12 +8191,12 @@ var MasspaItemCategory = function (_Component) {
                                   )
                                 )
                               ) : React__default.createElement(
-                                MasspaMenuLink02,
+                                MasspaItemLink02,
                                 { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8207,7 +8207,7 @@ var MasspaItemCategory = function (_Component) {
                             ),
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-7 col-sm-7' },
+                              { className: 'ms-item-category-col-md-7 col-sm-7' },
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-group-title-text' },
@@ -8219,22 +8219,22 @@ var MasspaItemCategory = function (_Component) {
                       } else {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          { className: 'ms-item-category-col-md-6 col-sm-12 col-xs-6', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-card fade-in-left' },
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-5 col-sm-5' },
+                              { className: 'ms-item-category-col-md-5 col-sm-5' },
                               typeof navigate !== 'undefined' ? React__default.createElement(
-                                MasspaMenuLink03,
+                                MasspaItemLink03,
                                 { onClick: function onClick() {
                                     return _this2.handleClickLink(item.itemCode, link);
                                   }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8242,12 +8242,12 @@ var MasspaItemCategory = function (_Component) {
                                   )
                                 )
                               ) : React__default.createElement(
-                                MasspaMenuLink02,
+                                MasspaItemLink02,
                                 { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8258,7 +8258,7 @@ var MasspaItemCategory = function (_Component) {
                             ),
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-7 col-sm-7' },
+                              { className: 'ms-item-category-col-md-7 col-sm-7' },
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-group-title-text' },
@@ -8271,28 +8271,28 @@ var MasspaItemCategory = function (_Component) {
                     } else {
                       return React__default.createElement(
                         'div',
-                        { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                        { className: 'ms-item-category-col-md-6 col-sm-12 col-xs-6', key: i },
                         React__default.createElement(
                           'div',
                           { className: 'masspa-item-category-card fade-in-left' },
                           React__default.createElement(
                             'div',
-                            { className: 'col-md-5 col-sm-5' },
+                            { className: 'ms-item-category-col-md-5 col-sm-5' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                              React__default.createElement(MasspaMenuImage02, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                              React__default.createElement(MasspaItemImage02, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
                             ) : React__default.createElement(
-                              MasspaMenuLink02,
+                              MasspaItemLink02,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                              React__default.createElement(MasspaMenuImage02, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                              React__default.createElement(MasspaItemImage02, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
                             )
                           ),
                           React__default.createElement(
                             'div',
-                            { className: 'col-md-7 col-sm-7' },
+                            { className: 'ms-item-category-col-md-7 col-sm-7' },
                             React__default.createElement(
                               'div',
                               { className: 'masspa-item-category-group-title-text' },
@@ -8316,19 +8316,19 @@ var MasspaItemCategory = function (_Component) {
                       if (animation === 'zoom') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 col-md-3 col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8336,12 +8336,12 @@ var MasspaItemCategory = function (_Component) {
                                 )
                               )
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8355,19 +8355,19 @@ var MasspaItemCategory = function (_Component) {
                       } else if (animation === 'rotate') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 col-md-3 col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8375,12 +8375,12 @@ var MasspaItemCategory = function (_Component) {
                                 )
                               )
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8394,19 +8394,19 @@ var MasspaItemCategory = function (_Component) {
                       } else {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 col-md-3 col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8414,12 +8414,12 @@ var MasspaItemCategory = function (_Component) {
                                 )
                               )
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8435,20 +8435,20 @@ var MasspaItemCategory = function (_Component) {
                       if (animation === 'zoom') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 col-md-3 col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ),
                             React__default.createElement(
                               'div',
@@ -8461,20 +8461,20 @@ var MasspaItemCategory = function (_Component) {
                       } else if (animation === 'rotate') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 col-md-3 col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ),
                             React__default.createElement(
                               'div',
@@ -8487,20 +8487,20 @@ var MasspaItemCategory = function (_Component) {
                       } else {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 col-md-3 col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                              React__default.createElement(MasspaMenuImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: imageDefaut, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ),
                             React__default.createElement(
                               'div',
@@ -8520,22 +8520,22 @@ var MasspaItemCategory = function (_Component) {
                       if (animation === 'zoom') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          { className: 'ms-item-category-col-md-6 ms-item-category-col-sm-12 ms-item-category-col-xs-6', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-card fade-in-left' },
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-5 col-sm-5' },
+                              { className: 'ms-item-category-col-md-5 ms-item-category-col-sm-5' },
                               typeof navigate !== 'undefined' ? React__default.createElement(
-                                MasspaMenuLink03,
+                                MasspaItemLink03,
                                 { onClick: function onClick() {
                                     return _this2.handleClickLink(item.itemCode, link);
                                   }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8543,12 +8543,12 @@ var MasspaItemCategory = function (_Component) {
                                   )
                                 )
                               ) : React__default.createElement(
-                                MasspaMenuLink02,
+                                MasspaItemLink02,
                                 { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8559,7 +8559,7 @@ var MasspaItemCategory = function (_Component) {
                             ),
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-7 col-sm-7' },
+                              { className: 'ms-item-category-col-md-7 ms-item-category-col-sm-7' },
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-group-title-text' },
@@ -8571,22 +8571,22 @@ var MasspaItemCategory = function (_Component) {
                       } else if (animation === 'rotate') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          { className: 'ms-item-category-col-md-6 ms-item-category-col-sm-12 ms-item-category-coll-xs-6', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-card fade-in-left' },
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-5 col-sm-5' },
+                              { className: 'ms-item-category-col-md-5 ms-item-category-col-sm-5' },
                               typeof navigate !== 'undefined' ? React__default.createElement(
-                                MasspaMenuLink03,
+                                MasspaItemLink03,
                                 { onClick: function onClick() {
                                     return _this2.handleClickLink(item.itemCode, link);
                                   }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8594,12 +8594,12 @@ var MasspaItemCategory = function (_Component) {
                                   )
                                 )
                               ) : React__default.createElement(
-                                MasspaMenuLink02,
+                                MasspaItemLink02,
                                 { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8610,7 +8610,7 @@ var MasspaItemCategory = function (_Component) {
                             ),
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-7 col-sm-7' },
+                              { className: 'ms-item-category-col-md-7 ms-item-category-col-sm-7' },
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-group-title-text' },
@@ -8622,22 +8622,22 @@ var MasspaItemCategory = function (_Component) {
                       } else {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          { className: 'ms-item-category-col-md-6 ms-item-category-col-sm-12 ms-item-category-col-xs-6', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-card fade-in-left' },
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-5 col-sm-5' },
+                              { className: 'ms-item-category-col-md-5 ms-item-category-col-sm-5' },
                               typeof navigate !== 'undefined' ? React__default.createElement(
-                                MasspaMenuLink03,
+                                MasspaItemLink03,
                                 { onClick: function onClick() {
                                     return _this2.handleClickLink(item.itemCode, link);
                                   }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8645,12 +8645,12 @@ var MasspaItemCategory = function (_Component) {
                                   )
                                 )
                               ) : React__default.createElement(
-                                MasspaMenuLink02,
+                                MasspaItemLink02,
                                 { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                                 React__default.createElement(
                                   'span',
                                   { className: 'masspa-item-category-overlay-2' },
-                                  React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                  React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                   React__default.createElement(
                                     'div',
                                     { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8661,7 +8661,7 @@ var MasspaItemCategory = function (_Component) {
                             ),
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-7 col-sm-7' },
+                              { className: 'ms-item-category-col-md-7 ms-item-category-col-sm-7' },
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-group-title-text' },
@@ -8675,28 +8675,28 @@ var MasspaItemCategory = function (_Component) {
                       if (animation === 'zoom') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          { className: 'ms-item-category-col-md-6 col-sm-12 ms-item-category-col-xs-6', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-card fade-in-left' },
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-5 col-sm-5' },
+                              { className: 'ms-item-category-col-md-5 ms-item-category-col-sm-5' },
                               typeof navigate !== 'undefined' ? React__default.createElement(
-                                MasspaMenuLink03,
+                                MasspaItemLink03,
                                 { onClick: function onClick() {
                                     return _this2.handleClickLink(item.itemCode, link);
                                   }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                                React__default.createElement(MasspaMenuImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                                React__default.createElement(MasspaItemImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
                               ) : React__default.createElement(
-                                MasspaMenuLink02,
+                                MasspaItemLink02,
                                 { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                                React__default.createElement(MasspaMenuImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                                React__default.createElement(MasspaItemImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
                               )
                             ),
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-7 col-sm-7' },
+                              { className: 'ms-item-category-col-md-7 ms-item-category-col-sm-7' },
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-group-title-text' },
@@ -8717,28 +8717,28 @@ var MasspaItemCategory = function (_Component) {
                       } else if (animation === 'rotate') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          { className: 'ms-item-category-col-md-6 col-sm-12 ms-item-category-col-xs-6', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-card fade-in-left' },
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-5 col-sm-5' },
+                              { className: 'ms-item-category-col-md-5 ms-item-category-col-sm-5' },
                               typeof navigate !== 'undefined' ? React__default.createElement(
-                                MasspaMenuLink03,
+                                MasspaItemLink03,
                                 { onClick: function onClick() {
                                     return _this2.handleClickLink(item.itemCode, link);
                                   }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                                React__default.createElement(MasspaMenuImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                                React__default.createElement(MasspaItemImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
                               ) : React__default.createElement(
-                                MasspaMenuLink02,
+                                MasspaItemLink02,
                                 { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                                React__default.createElement(MasspaMenuImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                                React__default.createElement(MasspaItemImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
                               )
                             ),
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-7 col-sm-7' },
+                              { className: 'ms-item-category-col-md-7 ms-item-category-col-sm-7' },
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-group-title-text' },
@@ -8759,28 +8759,28 @@ var MasspaItemCategory = function (_Component) {
                       } else {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-md-6 col-sm-12 col-xs-6', key: i },
+                          { className: 'ms-item-category-col-md-6 ms-item-category-col-sm-12 ms-item-category-col-xs-6', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-card fade-in-left' },
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-5 col-sm-5' },
+                              { className: 'ms-item-category-col-md-5 ms-item-category-col-sm-5' },
                               typeof navigate !== 'undefined' ? React__default.createElement(
-                                MasspaMenuLink03,
+                                MasspaItemLink03,
                                 { onClick: function onClick() {
                                     return _this2.handleClickLink(item.itemCode, link);
                                   }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                                React__default.createElement(MasspaMenuImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                                React__default.createElement(MasspaItemImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
                               ) : React__default.createElement(
-                                MasspaMenuLink02,
+                                MasspaItemLink02,
                                 { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                                React__default.createElement(MasspaMenuImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
+                                React__default.createElement(MasspaItemImage02, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius })
                               )
                             ),
                             React__default.createElement(
                               'div',
-                              { className: 'col-md-7 col-sm-7' },
+                              { className: 'ms-item-category-col-md-7 ms-item-category-col-sm-7' },
                               React__default.createElement(
                                 'div',
                                 { className: 'masspa-item-category-group-title-text' },
@@ -8805,19 +8805,19 @@ var MasspaItemCategory = function (_Component) {
                       if (animation === 'zoom') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 ms-item-category-col-md-3 ms-item-category-col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8825,12 +8825,12 @@ var MasspaItemCategory = function (_Component) {
                                 )
                               )
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8844,19 +8844,19 @@ var MasspaItemCategory = function (_Component) {
                       } else if (animation === 'rotate') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 ms-item-category-col-md-3 ms-item-category-col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8864,12 +8864,12 @@ var MasspaItemCategory = function (_Component) {
                                 )
                               )
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8883,19 +8883,19 @@ var MasspaItemCategory = function (_Component) {
                       } else {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 ms-item-category-col-md-3 ms-item-category-col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8903,12 +8903,12 @@ var MasspaItemCategory = function (_Component) {
                                 )
                               )
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
                               React__default.createElement(
                                 'span',
                                 { className: 'masspa-item-category-overlay-2' },
-                                React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
+                                React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode }),
                                 React__default.createElement(
                                   'div',
                                   { className: 'masspa-item-category-title-2', style: { color: '' + colorTitle } },
@@ -8924,20 +8924,20 @@ var MasspaItemCategory = function (_Component) {
                       if (animation === 'zoom') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 ms-item-category-col-md-3 ms-item-category-col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-zoom' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ),
                             React__default.createElement(
                               'div',
@@ -8950,20 +8950,20 @@ var MasspaItemCategory = function (_Component) {
                       } else if (animation === 'rotate') {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 ms-item-category-col-md-3 ms-item-category-col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage, className: 'masspa-item-category-rotate' },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ),
                             React__default.createElement(
                               'div',
@@ -8976,20 +8976,20 @@ var MasspaItemCategory = function (_Component) {
                       } else {
                         return React__default.createElement(
                           'div',
-                          { className: 'col-sm-12 col-md-3 col-lg-3', key: i },
+                          { className: 'ms-item-category-col-sm-12 ms-item-category-col-md-3 ms-item-category-col-lg-3', key: i },
                           React__default.createElement(
                             'div',
                             { className: 'masspa-item-category-container' },
                             typeof navigate !== 'undefined' ? React__default.createElement(
-                              MasspaMenuLink03,
+                              MasspaItemLink03,
                               { onClick: function onClick() {
                                   return _this2.handleClickLink(item.itemCode, link);
                                 }, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ) : React__default.createElement(
-                              MasspaMenuLink01,
+                              MasspaItemLink01,
                               { href: '' + link + item.itemCode, sizeImage: sizeImage, borderRadius: borderRadius, borderImage: borderImage },
-                              React__default.createElement(MasspaMenuImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
+                              React__default.createElement(MasspaItemImage, { src: item.image, alt: item.title, sizeImage: sizeImage, borderRadius: borderRadius, mode: mode })
                             ),
                             React__default.createElement(
                               'div',
