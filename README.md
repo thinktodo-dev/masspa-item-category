@@ -154,17 +154,17 @@ export default class App extends Component {
 
 ## Properties
 
-| Prop                      | Description                             | Value                         | Default       | Required | 
-| ------------------------- |-----------------------------------------|-------------------------------|---------------|----------|
-| **`listItems`**           | List item to show                       |                               | `[]`          |  Array   |
-| **`link`**                | Link url                                |                               | `"#"`         |  String  |
-| **`borderImage`**         | Border for image                        |                               | `"none"`      |  String  |            
-| **`sizeImage`**           | Size image                              |                               | `140`         |  Number  |
-| **`mode`**                | Mode title inside or outside image      | `1` or `2`                    | `1`           |  Number  |
-| **`borderRadius`**        | Border radius for image                 | `"0px"` or `"rounded"`        | `"0px"`       |  String  |
-| **`animation`**           | Animation                               | `"zoom"` or `"rotate"`        | `"zoom"`      |  String  |
-| **`colorTitle`**          | Color title image                       |                               | `"#fd7400"`   |  String  |
-| **`layout`**              | Layout of category                      | `1` or `2`                    | `1`           |  Number  |
+| Prop                      | Description                             | Value                         | Default                            | Required          | 
+| ------------------------- |-----------------------------------------|-------------------------------|------------------------------------|-------------------|
+| **`listItems`**           | List item to show                       |                               | `[]`                               |  Array            |
+| **`link`**                | Link url                                |                               | `/category/?categoryId=`           |  Template String  |
+| **`borderImage`**         | Border for image                        |                               | `"none"`                           |  String           |            
+| **`sizeImage`**           | Size image                              |                               | `140`                              |  Number           |
+| **`mode`**                | Mode title inside or outside image      | `1` or `2`                    | `1`                                |  Number           |
+| **`borderRadius`**        | Border radius for image                 | `"0px"` or `"rounded"`        | `"0px"`                            |  String           |
+| **`animation`**           | Animation                               | `"zoom"` or `"rotate"`        | `"zoom"`                           |  String           |
+| **`colorTitle`**          | Color title image                       |                               | `"#fd7400"`                        |  String           |
+| **`layout`**              | Layout of category                      | `1` or `2`                    | `1`                                |  Number           |
 
 
 ## Caution: use css Bootstrap 4.0.1

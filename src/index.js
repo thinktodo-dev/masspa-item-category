@@ -24,7 +24,7 @@ function setImagePosition(value) {
 
 
 
-const MasspaMenuLink = styled.a`
+const MasspaMenuLink01 = styled.a`
     background-color: #ddd;
     position: relative;
     display: block;
@@ -35,6 +35,10 @@ const MasspaMenuLink = styled.a`
     border: ${props => props.borderImage};
     z-index: 3;
     overflow: hidden;
+
+    @media only screen and (min-width: 1440px) {
+      margin: 0px auto
+    }
     @media only screen and (max-width: 767.98px) and (min-width: 457px){
       width: ${props => props.sizeImage * 2 + 'px'};
       height: ${props => props.sizeImage * 2 + 'px'};
@@ -54,6 +58,11 @@ const MasspaMenuLink02 = styled.a`
     border: ${props => props.borderImage};
     z-index: 3;
     overflow: hidden;
+
+    @media only screen and (min-width: 1440px) {
+      margin: 0px auto
+    }
+
     @media only screen and (max-width: 767.98px) and (min-width: 576px){
       width: 250px;
       height: 250px;
@@ -66,6 +75,32 @@ const MasspaMenuLink02 = styled.a`
       margin: 0px auto
     }
 `
+  const MasspaMenuLink03 = styled.div`
+  background-color: #ddd;
+  position: relative;
+  display: block;
+  width: ${props => props.sizeImage + 'px'};
+  height: ${props => props.sizeImage + 'px'};
+  ${({ borderRadius }) => (borderRadius === 'rounded' ? getBorderRadius(50) : `border-radius: ${borderRadius}`)};
+  border: ${props => props.borderImage};
+  z-index: 3;
+  overflow: hidden;
+
+  @media only screen and (min-width: 1440px) {
+    margin: 0px auto
+  }
+  @media only screen and (max-width: 767.98px) and (min-width: 576px){
+    width: 250px;
+    height: 250px;
+  }
+  @media only screen and (max-width: 575.98px) {
+    width: 200px;
+    height: 200px;
+  }
+  @media only screen and (max-width: 479.98px) {
+    margin: 0px auto
+  }
+  `
 const MasspaMenuImage02 = styled.img`
     object-fit: cover;
     position: absolute;
@@ -157,6 +192,12 @@ export default class MasspaItemCategory extends Component {
     this.sliderItemServices.slickPrev();
   }
 
+  handleClickLink(id, link) {
+    if (typeof navigate !== `undefined`) {
+      navigate(`${link}${id}`)
+    }
+  }
+
   render() {
     const { listItems, link, sizeImage, borderImage, borderRadius, mode, animation , layout , colorTitle } = this.props
     if (listItems.length !== 0) {
@@ -191,12 +232,22 @@ export default class MasspaItemCategory extends Component {
                           if(animation === 'zoom'){
                             return (
                                 <div className="masspa-item-category-container"  key={i}>
-                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                   {(typeof navigate !== `undefined`) ? (
+                                      <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                      <span className="masspa-item-category-overlay-2">
+                                      <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                      <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                      </span>
+                                    </MasspaMenuLink03>
+                                   ):(
+                                    <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
                                     <span className="masspa-item-category-overlay-2">
                                     <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
                                     <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                                     </span>
-                                  </MasspaMenuLink>
+                                  </MasspaMenuLink01>
+                                   )}
+                              
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                 </div>
         
@@ -205,12 +256,22 @@ export default class MasspaItemCategory extends Component {
                             return (
                              
                                 <div className="masspa-item-category-container" key={i}>
-                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                                    <span className="masspa-item-category-overlay-2">
-                                    <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
-                                    </span>
-                                  </MasspaMenuLink>
+                                    {(typeof navigate !== `undefined`) ? (
+                                      <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                                      <span className="masspa-item-category-overlay-2">
+                                      <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                      <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                      </span>
+                                      </MasspaMenuLink03>
+                                    ):(
+                                      <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                                      <span className="masspa-item-category-overlay-2">
+                                      <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                      <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                      </span>
+                                    </MasspaMenuLink01>
+                                    )}
+                                 
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                 </div>
                             
@@ -220,12 +281,22 @@ export default class MasspaItemCategory extends Component {
                             return (
                            
                                 <div className="masspa-item-category-container" key={i}>
-                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                                    <span className="masspa-item-category-overlay-2">
-                                    <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
-                                    </span>
-                                  </MasspaMenuLink>
+                                    {(typeof navigate !== `undefined`) ? (
+                                        <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                                        <span className="masspa-item-category-overlay-2">
+                                        <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                        <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                        </span>
+                                      </MasspaMenuLink03>
+                                    ):(
+                                      <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                                      <span className="masspa-item-category-overlay-2">
+                                      <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                      <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                      </span>
+                                    </MasspaMenuLink01>
+                                    )}
+                                 
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                 </div>
                            
@@ -238,9 +309,16 @@ export default class MasspaItemCategory extends Component {
                            return (
                            
                                <div className="masspa-item-category-container" key={i}>
-                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                                 <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                 </MasspaMenuLink>
+                                  {(typeof navigate !== `undefined`) ? (
+                                    <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                    <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    </MasspaMenuLink03>
+                                  ):(
+                                    <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                    <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    </MasspaMenuLink01>
+                                  )}
+                                
                                  <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                </div>
@@ -251,9 +329,16 @@ export default class MasspaItemCategory extends Component {
                            return (
                           
                                <div className="masspa-item-category-container" key={i}>
-                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  className="masspa-item-category-rotate">
-                                 <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                 </MasspaMenuLink>
+                                 {(typeof navigate !== `undefined`) ? (
+                                  <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  className="masspa-item-category-rotate">
+                                  <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                  </MasspaMenuLink03>
+                                 ):(
+                                  <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  className="masspa-item-category-rotate">
+                                  <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                  </MasspaMenuLink01>
+                                 )}
+                             
                                  <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                </div>
@@ -264,9 +349,16 @@ export default class MasspaItemCategory extends Component {
                            return (
                          
                                <div className="masspa-item-category-container" key={i}>
-                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  >
-                                 <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                 </MasspaMenuLink>
+                                  {(typeof navigate !== `undefined`) ? (
+                                    <MasspaMenuLink03  onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  >
+                                    <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    </MasspaMenuLink03>
+                                  ):(
+                                    <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage}  >
+                                    <MasspaMenuImage  src={imageDefaut}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    </MasspaMenuLink01>
+                                  )}
+                                 
                                  <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                </div>
@@ -285,12 +377,22 @@ export default class MasspaItemCategory extends Component {
                             return (
                          
                                 <div className="masspa-item-category-container" key={i}>
-                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                  {(typeof navigate !== `undefined`) ? (
+                                    <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
                                     <span className="masspa-item-category-overlay-2">
                                     <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
                                     <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                                     </span>
-                                  </MasspaMenuLink>
+                                  </MasspaMenuLink03>
+                                  ):(
+                                    <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                    <span className="masspa-item-category-overlay-2">
+                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                    </span>
+                                  </MasspaMenuLink01>
+                                  )}
+                                
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                 </div>
                             
@@ -300,12 +402,22 @@ export default class MasspaItemCategory extends Component {
                             return (
                             
                                 <div className="masspa-item-category-container" key={i}>
-                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                                    <span className="masspa-item-category-overlay-2">
-                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
-                                    </span>
-                                  </MasspaMenuLink>
+                                    {(typeof navigate !== `undefined`) ? (
+                                        <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                                        <span className="masspa-item-category-overlay-2">
+                                        <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                        <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                        </span>
+                                      </MasspaMenuLink03>
+                                    ):(
+                                      <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                                      <span className="masspa-item-category-overlay-2">
+                                      <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                      <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                      </span>
+                                    </MasspaMenuLink01>
+                                    )}
+                               
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                 </div>
                            
@@ -315,12 +427,22 @@ export default class MasspaItemCategory extends Component {
                             return (
                            
                                 <div className="masspa-item-category-container" key={i}>
-                                  <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                                    <span className="masspa-item-category-overlay-2">
-                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
-                                    <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
-                                    </span>
-                                  </MasspaMenuLink>
+                                    {(typeof navigate !== `undefined`) ? (
+                                        <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                                        <span className="masspa-item-category-overlay-2">
+                                        <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                        <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                        </span>
+                                      </MasspaMenuLink03>
+                                    ):(
+                                      <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                                      <span className="masspa-item-category-overlay-2">
+                                      <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode}/>
+                                      <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                                      </span>
+                                    </MasspaMenuLink01>
+                                    )}
+                                 
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                 </div>
                             
@@ -333,9 +455,16 @@ export default class MasspaItemCategory extends Component {
                            return (
                            
                                <div className="masspa-item-category-container" key={i}>
-                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                                   <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
-                                 </MasspaMenuLink>
+                                   {(typeof navigate !== `undefined`) ? (
+                                        <MasspaMenuLink01 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                        <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
+                                      </MasspaMenuLink01>
+                                   ):(
+                                    <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
+                                  </MasspaMenuLink01>
+                                   )}
+                               
                                  <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                </div>
@@ -345,9 +474,16 @@ export default class MasspaItemCategory extends Component {
                           }else if(animation === 'rotate'){
                            return (
                                <div className="masspa-item-category-container" key={i}>
-                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                                   <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
-                                 </MasspaMenuLink>
+                                  {(typeof navigate !== `undefined`) ? (
+                                      <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                                      <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
+                                    </MasspaMenuLink03>
+                                  ):(
+                                    <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
+                                  </MasspaMenuLink01>
+                                  )}
+                               
                                  <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                </div>
@@ -356,9 +492,16 @@ export default class MasspaItemCategory extends Component {
                           }else{
                            return (
                                <div className="masspa-item-category-container" key={i}>
-                                 <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                                   <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
-                                 </MasspaMenuLink>
+                                  {(typeof navigate !== `undefined`) ? (
+                                    <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
+                                    </MasspaMenuLink03>
+                                  ):(
+                                    <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                                    <MasspaMenuImage  src={item.image}  alt={item.title} sizeImage={sizeImage}   borderRadius={borderRadius} mode={mode} />
+                                  </MasspaMenuLink01>
+                                  )}
+                                
                                  <div  className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                                  {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                </div>
@@ -393,12 +536,22 @@ export default class MasspaItemCategory extends Component {
                       <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                       <div className="masspa-item-category-card fade-in-left">
                         <div className="col-md-5 col-sm-5">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
                           <span className="masspa-item-category-overlay-2">
                             <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
                             <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                           </span>
-                        </MasspaMenuLink>
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink02 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink02>
+                        )}
+                      
                         </div>
                       <div className="col-md-7 col-sm-7">
                       <div className="masspa-item-category-group-title-text">
@@ -413,12 +566,22 @@ export default class MasspaItemCategory extends Component {
                       <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                       <div className="masspa-item-category-card fade-in-left">
                         <div className="col-md-5 col-sm-5">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                        {(typeof navigate !== `undefined`) ? (
+                            <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink02 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
                           <span className="masspa-item-category-overlay-2">
                             <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
                             <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                           </span>
-                        </MasspaMenuLink>
+                        </MasspaMenuLink02>
+                        )}
+                     
                         </div>
                       <div className="col-md-7 col-sm-7">
                       <div className="masspa-item-category-group-title-text">
@@ -433,12 +596,22 @@ export default class MasspaItemCategory extends Component {
                       <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="col-md-5 col-sm-5">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                          {(typeof navigate !== `undefined`) ? (
+                            <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
                             <span className="masspa-item-category-overlay-2">
                               <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
                               <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                             </span>
-                          </MasspaMenuLink>
+                          </MasspaMenuLink03>
+                          ):(
+                            <MasspaMenuLink02 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                            <span className="masspa-item-category-overlay-2">
+                              <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                            </span>
+                          </MasspaMenuLink02>
+                          )}
+                         
                           </div>
                         <div className="col-md-7 col-sm-7">
                         <div className="masspa-item-category-group-title-text">
@@ -454,9 +627,16 @@ export default class MasspaItemCategory extends Component {
                     <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                       <div className="masspa-item-category-card fade-in-left">
                         <div className="col-md-5 col-sm-5">
-                        <MasspaMenuLink02 href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <MasspaMenuImage02 src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink02 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
                           <MasspaMenuImage02 src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
                         </MasspaMenuLink02>
+                        )}
+                     
                         </div>
                       <div className="col-md-7 col-sm-7">
                       <div className="masspa-item-category-group-title-text">
@@ -479,12 +659,22 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                            <span className="masspa-item-category-overlay-2">
-                              <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
-                            </span>
-                          </MasspaMenuLink>
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink01>
+                        )}
+                        
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
                       </div>
@@ -494,12 +684,22 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                            <span className="masspa-item-category-overlay-2">
-                              <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
-                            </span>
-                          </MasspaMenuLink>
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)}   sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink01>
+                        )}
+                        
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
                       </div>
@@ -509,12 +709,22 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                        {(typeof navigate !== `undefined`) ? (
+                            <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)}   sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
                             <span className="masspa-item-category-overlay-2">
                               <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
                               <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                             </span>
-                          </MasspaMenuLink>
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink01>
+                        )}
+                        
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
                       </div>
@@ -527,9 +737,16 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                          </MasspaMenuLink>
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                        </MasspaMenuLink01>
+                        )}
+                       
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -540,9 +757,16 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                        {(typeof navigate !== `undefined`) ? (
+                            <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
                             <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                          </MasspaMenuLink>
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                          <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                        </MasspaMenuLink01>
+                        )}
+                        
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -553,9 +777,16 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
-                            <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                          </MasspaMenuLink>
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03  onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                          <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                          <MasspaMenuImage src={imageDefaut} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                        </MasspaMenuLink01>
+                        )}
+                        
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -576,12 +807,22 @@ export default class MasspaItemCategory extends Component {
                       <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                       <div className="masspa-item-category-card fade-in-left">
                         <div className="col-md-5 col-sm-5">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
                           <span className="masspa-item-category-overlay-2">
                             <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
                             <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                           </span>
-                        </MasspaMenuLink>
+                        </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink02 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink02>
+                        )}
+                    
                         </div>
                       <div className="col-md-7 col-sm-7">
                       <div className="masspa-item-category-group-title-text">
@@ -596,12 +837,22 @@ export default class MasspaItemCategory extends Component {
                       <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                       <div className="masspa-item-category-card fade-in-left">
                         <div className="col-md-5 col-sm-5">
-                        <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03  onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
                           <span className="masspa-item-category-overlay-2">
                             <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
                             <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                           </span>
-                        </MasspaMenuLink>
+                        </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink02  href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink02>
+                        )}
+                      
                         </div>
                       <div className="col-md-7 col-sm-7">
                       <div className="masspa-item-category-group-title-text">
@@ -616,12 +867,22 @@ export default class MasspaItemCategory extends Component {
                       <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="col-md-5 col-sm-5">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                          {(typeof navigate !== `undefined`) ? (
+                              <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                              <span className="masspa-item-category-overlay-2">
+                                <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                                <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                              </span>
+                            </MasspaMenuLink03>
+                          ):(
+                            <MasspaMenuLink02 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
                             <span className="masspa-item-category-overlay-2">
                               <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
                               <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                             </span>
-                          </MasspaMenuLink>
+                          </MasspaMenuLink02>
+                          )}
+                       
                           </div>
                         <div className="col-md-7 col-sm-7">
                         <div className="masspa-item-category-group-title-text">
@@ -638,9 +899,16 @@ export default class MasspaItemCategory extends Component {
                       <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="col-md-5 col-sm-5">
-                          <MasspaMenuLink02 href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          {(typeof navigate !== `undefined`) ? (
+                              <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                              <MasspaMenuImage02 src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
+                            </MasspaMenuLink03>
+                          ):(
+                            <MasspaMenuLink02 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
                             <MasspaMenuImage02 src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
                           </MasspaMenuLink02>
+                          )}
+                         
                           </div>
                         <div className="col-md-7 col-sm-7">
                         <div className="masspa-item-category-group-title-text">
@@ -660,9 +928,16 @@ export default class MasspaItemCategory extends Component {
                       <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="col-md-5 col-sm-5">
-                          <MasspaMenuLink02 href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                          {(typeof navigate !== `undefined`) ? (
+                              <MasspaMenuLink03  onClick={() => this.handleClickLink(item.itemCode, link)}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                              <MasspaMenuImage02 src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
+                            </MasspaMenuLink03>
+                          ):(
+                            <MasspaMenuLink02  href={`${link}${item.itemCode}`}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
                             <MasspaMenuImage02 src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
                           </MasspaMenuLink02>
+                          )}
+                        
                           </div>
                         <div className="col-md-7 col-sm-7">
                         <div className="masspa-item-category-group-title-text">
@@ -682,9 +957,16 @@ export default class MasspaItemCategory extends Component {
                       <div className="col-md-6 col-sm-12 col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="col-md-5 col-sm-5">
-                          <MasspaMenuLink02 href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                          {(typeof navigate !== `undefined`) ? (
+                            <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)}  sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                            <MasspaMenuImage02 src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
+                          </MasspaMenuLink03>
+                          ):(
+                            <MasspaMenuLink02 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
                             <MasspaMenuImage02 src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} />
                           </MasspaMenuLink02>
+                          )}
+                       
                           </div>
                         <div className="col-md-7 col-sm-7">
                         <div className="masspa-item-category-group-title-text">
@@ -708,12 +990,22 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                            <span className="masspa-item-category-overlay-2">
-                              <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                              <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
-                            </span>
-                          </MasspaMenuLink>
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink01>
+                        )}
+                   
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
                       </div>
@@ -723,12 +1015,22 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                        {(typeof navigate !== `undefined`) ? (
+                            <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
                             <span className="masspa-item-category-overlay-2">
                               <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
                               <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                             </span>
-                          </MasspaMenuLink>
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink01>
+                        )}
+                         
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
                       </div>
@@ -738,12 +1040,22 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                        {(typeof navigate !== `undefined`) ? (
+                            <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
                             <span className="masspa-item-category-overlay-2">
                               <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
                               <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                             </span>
-                          </MasspaMenuLink>
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                          <span className="masspa-item-category-overlay-2">
+                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                            <div className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
+                          </span>
+                        </MasspaMenuLink01>
+                        )}
+                       
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
                       </div>
@@ -756,9 +1068,16 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
-                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                          </MasspaMenuLink>
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                        </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-zoom">
+                          <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                        </MasspaMenuLink01>
+                        )}
+                        
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -769,9 +1088,16 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
-                            <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                          </MasspaMenuLink>
+                        {(typeof navigate !== `undefined`) ? (
+                          <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                          <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} className="masspa-item-category-rotate">
+                          <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                        </MasspaMenuLink01>
+                        )}
+                         
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -782,9 +1108,16 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="col-sm-12 col-md-3 col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                          <MasspaMenuLink href={link} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                        {(typeof navigate !== `undefined`) ? (
+                            <MasspaMenuLink03 onClick={() => this.handleClickLink(item.itemCode, link)} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
                             <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
-                          </MasspaMenuLink>
+                          </MasspaMenuLink03>
+                        ):(
+                          <MasspaMenuLink01 href={`${link}${item.itemCode}`} sizeImage={sizeImage} borderRadius={borderRadius} borderImage={borderImage} >
+                          <MasspaMenuImage src={item.image} alt={item.title} sizeImage={sizeImage} borderRadius={borderRadius} mode={mode} />
+                        </MasspaMenuLink01>
+                        )}
+                         
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -817,7 +1150,7 @@ export default class MasspaItemCategory extends Component {
 
 MasspaItemCategory.defaultProps = {
   listItems: [],
-  link: "#",
+  link: `/category/?categoryId=`,
   sizeImage: 140,
   borderImage: 'none',
   borderRadius: '49px 49px 49px 0',

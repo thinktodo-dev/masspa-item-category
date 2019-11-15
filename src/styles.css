@@ -248,8 +248,8 @@ p{
     padding: 30px 8px 5px;
   }
   .masspa-item-category-title-2{
-    font-size: 18px;
-    padding: 20px 8px;
+    font-size: 15px;
+    padding: 16px 8px;
   }
 }
 
@@ -267,15 +267,18 @@ p{
 
 @media only screen and (max-width: 767.98px) and (min-width: 457px){
   .masspa-item-category-title-2{
-    font-size: 24px;
+    font-size: 18px;
     padding: 40px 15px 0px;
   }
 }
 
 @media only screen and (max-width: 456.98px) {
   .masspa-item-category-title-2{
-    font-size: 24px;
-    padding: 20px 15px 0px;
+    font-size: 15px;
+    padding: 15px 15px 0px;
+  }
+  .masspa-item-category-text{
+    padding-top: 20px;
   }
 }
 
