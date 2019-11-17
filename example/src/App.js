@@ -151,7 +151,7 @@ export default class App extends Component {
   render () {
     return (
       <div>
-        <MasspaItemCategory listItems={data} borderRadius="rounded" borderImage="5px solid #ddd" sizeImage={180} mode={2}  animation="zoom" layout={2} colorTitle="red"/>
+        <MasspaItemCategory listItems={data} borderRadius="rounded"  borderImage="5px solid #ddd" sizeImage={180} mode={1}  animation="zoom" layout={2} colorTitle="red"/>
       </div>
     )
   }
