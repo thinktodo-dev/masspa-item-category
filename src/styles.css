@@ -329,10 +329,6 @@ p{
     font-size: 18px;
     padding: 15px 15px 0px;
   }
-  .masspa-item-image-02 {
-    width: 200px !important;
-    height: 200px !important;
-  }
   .masspa-item-category-container{
     padding: 20px 0px;
   }  
@@ -701,7 +697,7 @@ p{
 }
 
 @media only screen and (max-width: 767.98px) and (min-width: 576px){
-  .masspa-item-link-03 , .masspa-item-image-03, .masspa-item-image-02, .masspa-item-image-04{
+  .masspa-item-link-03 , .masspa-item-image-02,.masspa-item-image-01, .masspa-item-image-03, .masspa-item-image-04{
     width: 200px !important;
     height: 200px !important;
 }
@@ -714,7 +710,7 @@ p{
 }
 
 @media only screen and (max-width: 575.98px) {
-  .masspa-item-link-03 , .masspa-item-image-03, .masspa-item-image-02, .masspa-item-image-04{
+  .masspa-item-link-03 , .masspa-item-image-02,.masspa-item-image-01, .masspa-item-image-03, .masspa-item-image-04{
     width: 200px !important;
     height: 200px !important;
   }

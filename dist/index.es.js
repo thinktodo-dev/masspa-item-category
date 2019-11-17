@@ -29,7 +29,7 @@ function styleInject(css, ref) {
   }
 }
 
-var css = "/* add css styles here (optional) */\r\n*,\r\n*::before,\r\n*::after {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  font-family: sans-serif;\r\n  line-height: 1.15;\r\n  -webkit-text-size-adjust: 100%;\r\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n}\r\n\r\na{\r\n  text-decoration: unset;\r\n}\r\n\r\n.masspa-item-arrow-left{\r\n  position : absolute;\r\n  top: 30%;\r\n  left: 0%;\r\n  width: 20px;\r\n  height: 20px;\r\n  z-index: 2;\r\n  cursor: pointer;\r\n}\r\n\r\n.masspa-item-arrow-right{\r\n  position : absolute;\r\n    top: 30%;\r\n    right: 0%;\r\n    width: 20px;\r\n    height: 20px;\r\n    z-index: 2;\r\n    cursor: pointer;\r\n}\r\n\r\n.masspa-item-link-03{\r\n  background-color: #ddd;\r\n  position: relative;\r\n  display: block;\r\n  z-index: 3;\r\n  overflow: hidden;\r\n  margin: 0px auto;\r\n  cursor: pointer;\r\n}\r\n\r\n.masspa-item-image-02{\r\n  /*mode 2*/\r\n  object-fit: cover;\r\n  position: absolute;\r\n  left: 50%;\r\n  top:0%;\r\n  transform : translate(-53%,-60%);\r\n  z-index: -1;\r\n}\r\n\r\n.masspa-item-image-01{\r\n  /*mode 1*/\r\n  object-fit: cover;\r\n  position: absolute;\r\n  left: 50%;\r\n  top:50%;\r\n  transform : translate(-50%,-50%);\r\n  z-index: -1;\r\n}\r\n\r\n.masspa-item-image-03{\r\n  /*layout 2*/\r\n  object-fit: cover;\r\n  position: absolute;\r\n  left: 50%;\r\n  transform: translate(-53%, -60%);\r\n  z-index: -1;\r\n}\r\n\r\n.masspa-item-image-04{\r\n  /*layout 2 mode 1*/\r\n  object-fit: cover;\r\n  position: absolute;\r\n  left: 50%;\r\n  transform: translate(-50%, 0%);\r\n  z-index: -1;\r\n}\r\n\r\n.ms-item-category-row {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-wrap: wrap;\r\n  flex-wrap: wrap;\r\n  margin-right: -15px;\r\n  margin-left: -15px;\r\n}\r\n\r\n.ms-item-category-no-gutter {\r\n  margin-right: 0;\r\n  margin-left: 0;\r\n}\r\n\r\n\r\n.ms-item-col-1, .ms-item-col-2, .ms-item-col-3, .ms-item-col-4, .ms-item-col-5, .ms-item-col-6, .ms-item-col-7, .ms-item-col-8, .ms-item-col-9, .ms-item-col-10, .ms-item-col-11, .ms-item-col-12, .ms-item-col,\r\n.ms-item-col-auto, .ms-item-col-sm-1, .ms-item-col-sm-2, .ms-item-col-sm-3, .ms-item-col-sm-4, .ms-item-col-sm-5, .ms-item-col-sm-6, .ms-item-col-sm-7, .ms-item-col-sm-8, .ms-item-col-sm-9, .ms-item-col-sm-10, .ms-item-col-sm-11, .ms-item-col-sm-12, .ms-item-col-sm,\r\n.ms-item-col-sm-auto, .ms-item-col-md-1, .ms-item-col-md-2, .ms-item-col-md-3, .ms-item-col-md-4, .ms-item-col-md-5, .ms-item-col-md-6, .ms-item-col-md-7, .ms-item-col-md-8, .ms-item-col-md-9, .ms-item-col-md-10, .ms-item-col-md-11, .ms-item-col-md-12, .ms-item-col-md,\r\n.ms-item-col-md-auto, .ms-item-col-lg-1, .ms-item-col-lg-2, .ms-item-col-lg-3, .ms-item-col-lg-4, .ms-item-col-lg-5, .ms-item-col-lg-6, .ms-item-col-lg-7, .ms-item-col-lg-8, .ms-item-col-lg-9, .ms-item-col-lg-10, .ms-item-col-lg-11, .ms-item-col-lg-12, .ms-item-col-lg,\r\n.ms-item-col-lg-auto, .ms-item-col-xl-1, .ms-item-col-xl-2, .ms-item-col-xl-3, .ms-item-col-xl-4, .ms-item-col-xl-5, .ms-item-col-xl-6, .ms-item-col-xl-7, .ms-item-col-xl-8, .ms-item-col-xl-9, .ms-item-col-xl-10, .ms-item-col-xl-11, .ms-item-col-xl-12, .ms-item-col-xl,\r\n.ms-item-col-xl-auto {\r\n  position: relative;\r\n  width: 100%;\r\n  padding-right: 15px;\r\n  padding-left: 15px;\r\n}\r\n\r\n.ms-item-col {\r\n  -ms-flex-preferred-size: 0;\r\n  flex-basis: 0;\r\n  -ms-flex-positive: 1;\r\n  flex-gms-item-category-row: 1;\r\n  max-width: 100%;\r\n}\r\n\r\n.ms-item-col-auto {\r\n  -ms-flex: 0 0 auto;\r\n  flex: 0 0 auto;\r\n  width: auto;\r\n  max-width: 100%;\r\n}\r\n\r\n.ms-item-col-1 {\r\n  -ms-flex: 0 0 8.333333%;\r\n  flex: 0 0 8.333333%;\r\n  max-width: 8.333333%;\r\n}\r\n\r\n.ms-item-col-2 {\r\n  -ms-flex: 0 0 16.666667%;\r\n  flex: 0 0 16.666667%;\r\n  max-width: 16.666667%;\r\n}\r\n\r\n.ms-item-col-3 {\r\n  -ms-flex: 0 0 25%;\r\n  flex: 0 0 25%;\r\n  max-width: 25%;\r\n}\r\n\r\n.ms-item-col-4 {\r\n  -ms-flex: 0 0 33.333333%;\r\n  flex: 0 0 33.333333%;\r\n  max-width: 33.333333%;\r\n}\r\n\r\n.ms-item-col-5 {\r\n  -ms-flex: 0 0 41.666667%;\r\n  flex: 0 0 41.666667%;\r\n  max-width: 41.666667%;\r\n}\r\n\r\n.ms-item-col-6 {\r\n  -ms-flex: 0 0 50%;\r\n  flex: 0 0 50%;\r\n  max-width: 50%;\r\n}\r\n\r\n.ms-item-col-7 {\r\n  -ms-flex: 0 0 58.333333%;\r\n  flex: 0 0 58.333333%;\r\n  max-width: 58.333333%;\r\n}\r\n\r\n.ms-item-col-8 {\r\n  -ms-flex: 0 0 66.666667%;\r\n  flex: 0 0 66.666667%;\r\n  max-width: 66.666667%;\r\n}\r\n\r\n.ms-item-col-9 {\r\n  -ms-flex: 0 0 75%;\r\n  flex: 0 0 75%;\r\n  max-width: 75%;\r\n}\r\n\r\n.ms-item-col-10 {\r\n  -ms-flex: 0 0 83.333333%;\r\n  flex: 0 0 83.333333%;\r\n  max-width: 83.333333%;\r\n}\r\n\r\n.ms-item-col-11 {\r\n  -ms-flex: 0 0 91.666667%;\r\n  flex: 0 0 91.666667%;\r\n  max-width: 91.666667%;\r\n}\r\n\r\n.ms-item-col-12 {\r\n  -ms-flex: 0 0 100%;\r\n  flex: 0 0 100%;\r\n  max-width: 100%;\r\n}\r\n.w-100{\r\n  width: 100%;\r\n}\r\n\r\np{\r\n  margin:0px;\r\n}\r\n.masspa-item-category-title-3{font-size:22px;line-height:25px;font-weight:300;font-family:open sans,sans-serif; text-align: left; color: #000000;}\r\n\r\n.masspa-item-category-slide-container{\r\n  position: relative;\r\n}\r\n.masspa-item-category-container{\r\n  display: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n  align-items: center;\r\n  padding: 40px 0px;\r\n}\r\n\r\n.masspa-item-category-title-1{\r\n    color: #141517;\r\n    line-height: 22px;\r\n    margin-bottom: 0;\r\n    text-transform: uppercase;\r\n}\r\n.masspa-item-category-title-2{\r\n  color: #ffffff;\r\n  line-height: 22px;\r\n  margin-bottom: 0;\r\n  text-align: center;\r\n  font-weight: 400;\r\n  text-transform: uppercase;\r\n  height: 100%;\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.masspa-item-category-text{\r\n  height: 78px;\r\n  overflow: hidden;\r\n}\r\n\r\n.masspa-item-category-text-layout02 p , .masspa-item-category-text-layout02 p span,  .masspa-item-category-text-layout02 span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 50px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 2;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n  font-size: 15px;\r\n  padding: 0px;\r\n}\r\n\r\n.masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 70px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 3;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.masspa-item-category-overlay-2{\r\n  position: absolute;\r\n  background-image:  linear-gradient(to bottom, rgba(255,0,0,0), rgba(40,40,40,1));\r\n  bottom: 0;\r\n  height: 40%;\r\n  width: inherit;\r\n  display: inline-block;\r\n}\r\n\r\n.masspa-item-category-zoom, .masspa-item-category-rotate{\r\n  -webkit-transition: all .5s;\r\n  -moz-transition: all .5s;\r\n  -o-transition: all .5s;\r\n  transition: all .5s;\r\n}\r\n.masspa-item-category-zoom:hover , .masspa-item-category-zoom:focus {\r\n  -ms-transform: scale(1.2);\r\n  -moz-transform: scale(1.2);\r\n  -webkit-transform: scale(1.2);\r\n  -o-transform: scale(1.2);\r\n  transform: scale(1.2);\r\n}\r\n\r\n.masspa-item-category-rotate:hover , .masspa-item-category-rotate:focus{\r\n  -ms-transform: rotate(360deg);\r\n  -moz-transform: rotate(360deg);\r\n  -webkit-transform: rotate(360deg);\r\n  -o-transform: rotate(360deg);\r\n  transform: rotate(360deg);\r\n}\r\n\r\n\r\n@media only screen and (min-width: 768px){\r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span {\r\n    font-size: 14px;\r\n  }\r\n  .masspa-item-category-title-1{\r\n    font-size: 18px;\r\n  }\r\n  .masspa-item-category-title-2{\r\n    font-size: 15px;\r\n    padding: 16px 8px;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) {\r\n  .masspa-item-category-title-1{\r\n    font-size: 20px;\r\n    padding: 30px 8px 5px;\r\n  }\r\n \r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n    font-size: 14px;\r\n  }\r\n\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) and (min-width: 457px){\r\n  .masspa-item-category-title-2{\r\n    font-size: 18px;\r\n    padding: 15px 15px 0px;\r\n  }\r\n  .masspa-item-image-02 {\r\n    width: 200px !important;\r\n    height: 200px !important;\r\n  }\r\n  .masspa-item-category-container{\r\n    padding: 20px 0px;\r\n  }  \r\n\r\n}\r\n\r\n@media only screen and (max-width: 456.98px) {\r\n  .masspa-item-category-title-2{\r\n    font-size: 15px;\r\n    padding: 15px 15px 0px;\r\n  }\r\n  .masspa-item-category-text{\r\n    padding-top: 20px;\r\n  }\r\n\r\n}\r\n\r\n@media (min-width: 576px) {\r\n  .ms-item-col-sm {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-sm-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-sm-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-col-sm-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-col-sm-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-col-sm-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-col-sm-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-col-sm-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-col-sm-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-col-sm-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-col-sm-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-col-sm-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-col-sm-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-col-sm-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n\r\n}\r\n@media (min-width: 768.98px) {\r\n  .masspa-item-category-card{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  .ms-item-col-md {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-md-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-md-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-col-md-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-col-md-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-col-md-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-col-md-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-col-md-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-col-md-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-col-md-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-col-md-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-col-md-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-col-md-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-col-md-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n@media (min-width: 992px) {\r\n  .ms-item-col-lg {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-lg-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-lg-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-col-lg-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-col-lg-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-col-lg-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-col-lg-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-col-lg-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-col-lg-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-col-lg-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-col-lg-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-col-lg-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-col-lg-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-col-lg-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .ms-item-col-xl {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-xl-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-xl-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-col-xl-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-col-xl-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-col-xl-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-col-xl-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-col-xl-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-col-xl-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-col-xl-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-col-xl-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-col-xl-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-col-xl-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-col-xl-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media only screen and (min-width: 1440px) {\r\n  .masspa-item-link-03{\r\n    margin: 0px auto\r\n  }\r\n}\r\n\r\n@media screen and (min-width:992px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n  }\r\n}\r\n@media screen  and (min-width:576px) and (max-width:991px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 30px;\r\n  }\r\n}\r\n\r\n@media screen  and (min-width:480px) and (max-width:575.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n    padding-top: 20px;\r\n  }\r\n}\r\n\r\n@media screen  and (max-width:479.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n    padding-top: 20px;\r\n    text-align: center;\r\n  }\r\n  .masspa-item-category-text-layout02{\r\n    padding-top: 20px;\r\n  }\r\n  .masspa-item-link-03{\r\n    margin: 0px auto\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) and (min-width: 576px){\r\n  .masspa-item-link-03 , .masspa-item-image-03, .masspa-item-image-02, .masspa-item-image-04{\r\n    width: 200px !important;\r\n    height: 200px !important;\r\n}\r\n  .masspa-item-category-card{\r\n    display:flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 575.98px) {\r\n  .masspa-item-link-03 , .masspa-item-image-03, .masspa-item-image-02, .masspa-item-image-04{\r\n    width: 200px !important;\r\n    height: 200px !important;\r\n  }\r\n  .masspa-item-link-03{\r\n    margin: 0px auto\r\n  }\r\n  .masspa-item-category-title-3{\r\n    text-align: center;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 479.98px) {\r\n  .masspa-item-image-03{\r\n  margin: 0px auto\r\n  }\r\n  .masspa-item-category-card{display:flex;flex-direction:column;justify-content:center;align-items:center}\r\n}\r\n\r\n@media screen and (min-width: 240px) and (max-width:767.98px) {\r\n .ms-item-col-xs-6{flex:0 0 100%;max-width:100%}\r\n  }\r\n\r\n  @media screen and (min-width: 1024px) {\r\n    .ms-item-col-xs-6{flex:0 0 50%!important;max-width:50%!important}\r\n  }\r\n \r\n  @media screen and (min-width: 240px) {\r\n      .masspa-item-category-card{padding:15px 0}\r\n  }\r\n\r\n";
+var css = "/* add css styles here (optional) */\r\n*,\r\n*::before,\r\n*::after {\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  font-family: sans-serif;\r\n  line-height: 1.15;\r\n  -webkit-text-size-adjust: 100%;\r\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n}\r\n\r\na{\r\n  text-decoration: unset;\r\n}\r\n\r\n.masspa-item-arrow-left{\r\n  position : absolute;\r\n  top: 30%;\r\n  left: 0%;\r\n  width: 20px;\r\n  height: 20px;\r\n  z-index: 2;\r\n  cursor: pointer;\r\n}\r\n\r\n.masspa-item-arrow-right{\r\n  position : absolute;\r\n    top: 30%;\r\n    right: 0%;\r\n    width: 20px;\r\n    height: 20px;\r\n    z-index: 2;\r\n    cursor: pointer;\r\n}\r\n\r\n.masspa-item-link-03{\r\n  background-color: #ddd;\r\n  position: relative;\r\n  display: block;\r\n  z-index: 3;\r\n  overflow: hidden;\r\n  margin: 0px auto;\r\n  cursor: pointer;\r\n}\r\n\r\n.masspa-item-image-02{\r\n  /*mode 2*/\r\n  object-fit: cover;\r\n  position: absolute;\r\n  left: 50%;\r\n  top:0%;\r\n  transform : translate(-53%,-60%);\r\n  z-index: -1;\r\n}\r\n\r\n.masspa-item-image-01{\r\n  /*mode 1*/\r\n  object-fit: cover;\r\n  position: absolute;\r\n  left: 50%;\r\n  top:50%;\r\n  transform : translate(-50%,-50%);\r\n  z-index: -1;\r\n}\r\n\r\n.masspa-item-image-03{\r\n  /*layout 2*/\r\n  object-fit: cover;\r\n  position: absolute;\r\n  left: 50%;\r\n  transform: translate(-53%, -60%);\r\n  z-index: -1;\r\n}\r\n\r\n.masspa-item-image-04{\r\n  /*layout 2 mode 1*/\r\n  object-fit: cover;\r\n  position: absolute;\r\n  left: 50%;\r\n  transform: translate(-50%, 0%);\r\n  z-index: -1;\r\n}\r\n\r\n.ms-item-category-row {\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-wrap: wrap;\r\n  flex-wrap: wrap;\r\n  margin-right: -15px;\r\n  margin-left: -15px;\r\n}\r\n\r\n.ms-item-category-no-gutter {\r\n  margin-right: 0;\r\n  margin-left: 0;\r\n}\r\n\r\n\r\n.ms-item-col-1, .ms-item-col-2, .ms-item-col-3, .ms-item-col-4, .ms-item-col-5, .ms-item-col-6, .ms-item-col-7, .ms-item-col-8, .ms-item-col-9, .ms-item-col-10, .ms-item-col-11, .ms-item-col-12, .ms-item-col,\r\n.ms-item-col-auto, .ms-item-col-sm-1, .ms-item-col-sm-2, .ms-item-col-sm-3, .ms-item-col-sm-4, .ms-item-col-sm-5, .ms-item-col-sm-6, .ms-item-col-sm-7, .ms-item-col-sm-8, .ms-item-col-sm-9, .ms-item-col-sm-10, .ms-item-col-sm-11, .ms-item-col-sm-12, .ms-item-col-sm,\r\n.ms-item-col-sm-auto, .ms-item-col-md-1, .ms-item-col-md-2, .ms-item-col-md-3, .ms-item-col-md-4, .ms-item-col-md-5, .ms-item-col-md-6, .ms-item-col-md-7, .ms-item-col-md-8, .ms-item-col-md-9, .ms-item-col-md-10, .ms-item-col-md-11, .ms-item-col-md-12, .ms-item-col-md,\r\n.ms-item-col-md-auto, .ms-item-col-lg-1, .ms-item-col-lg-2, .ms-item-col-lg-3, .ms-item-col-lg-4, .ms-item-col-lg-5, .ms-item-col-lg-6, .ms-item-col-lg-7, .ms-item-col-lg-8, .ms-item-col-lg-9, .ms-item-col-lg-10, .ms-item-col-lg-11, .ms-item-col-lg-12, .ms-item-col-lg,\r\n.ms-item-col-lg-auto, .ms-item-col-xl-1, .ms-item-col-xl-2, .ms-item-col-xl-3, .ms-item-col-xl-4, .ms-item-col-xl-5, .ms-item-col-xl-6, .ms-item-col-xl-7, .ms-item-col-xl-8, .ms-item-col-xl-9, .ms-item-col-xl-10, .ms-item-col-xl-11, .ms-item-col-xl-12, .ms-item-col-xl,\r\n.ms-item-col-xl-auto {\r\n  position: relative;\r\n  width: 100%;\r\n  padding-right: 15px;\r\n  padding-left: 15px;\r\n}\r\n\r\n.ms-item-col {\r\n  -ms-flex-preferred-size: 0;\r\n  flex-basis: 0;\r\n  -ms-flex-positive: 1;\r\n  flex-gms-item-category-row: 1;\r\n  max-width: 100%;\r\n}\r\n\r\n.ms-item-col-auto {\r\n  -ms-flex: 0 0 auto;\r\n  flex: 0 0 auto;\r\n  width: auto;\r\n  max-width: 100%;\r\n}\r\n\r\n.ms-item-col-1 {\r\n  -ms-flex: 0 0 8.333333%;\r\n  flex: 0 0 8.333333%;\r\n  max-width: 8.333333%;\r\n}\r\n\r\n.ms-item-col-2 {\r\n  -ms-flex: 0 0 16.666667%;\r\n  flex: 0 0 16.666667%;\r\n  max-width: 16.666667%;\r\n}\r\n\r\n.ms-item-col-3 {\r\n  -ms-flex: 0 0 25%;\r\n  flex: 0 0 25%;\r\n  max-width: 25%;\r\n}\r\n\r\n.ms-item-col-4 {\r\n  -ms-flex: 0 0 33.333333%;\r\n  flex: 0 0 33.333333%;\r\n  max-width: 33.333333%;\r\n}\r\n\r\n.ms-item-col-5 {\r\n  -ms-flex: 0 0 41.666667%;\r\n  flex: 0 0 41.666667%;\r\n  max-width: 41.666667%;\r\n}\r\n\r\n.ms-item-col-6 {\r\n  -ms-flex: 0 0 50%;\r\n  flex: 0 0 50%;\r\n  max-width: 50%;\r\n}\r\n\r\n.ms-item-col-7 {\r\n  -ms-flex: 0 0 58.333333%;\r\n  flex: 0 0 58.333333%;\r\n  max-width: 58.333333%;\r\n}\r\n\r\n.ms-item-col-8 {\r\n  -ms-flex: 0 0 66.666667%;\r\n  flex: 0 0 66.666667%;\r\n  max-width: 66.666667%;\r\n}\r\n\r\n.ms-item-col-9 {\r\n  -ms-flex: 0 0 75%;\r\n  flex: 0 0 75%;\r\n  max-width: 75%;\r\n}\r\n\r\n.ms-item-col-10 {\r\n  -ms-flex: 0 0 83.333333%;\r\n  flex: 0 0 83.333333%;\r\n  max-width: 83.333333%;\r\n}\r\n\r\n.ms-item-col-11 {\r\n  -ms-flex: 0 0 91.666667%;\r\n  flex: 0 0 91.666667%;\r\n  max-width: 91.666667%;\r\n}\r\n\r\n.ms-item-col-12 {\r\n  -ms-flex: 0 0 100%;\r\n  flex: 0 0 100%;\r\n  max-width: 100%;\r\n}\r\n.w-100{\r\n  width: 100%;\r\n}\r\n\r\np{\r\n  margin:0px;\r\n}\r\n.masspa-item-category-title-3{font-size:22px;line-height:25px;font-weight:300;font-family:open sans,sans-serif; text-align: left; color: #000000;}\r\n\r\n.masspa-item-category-slide-container{\r\n  position: relative;\r\n}\r\n.masspa-item-category-container{\r\n  display: flex;\r\n\tflex-direction: column;\r\n\tjustify-content: center;\r\n  align-items: center;\r\n  padding: 40px 0px;\r\n}\r\n\r\n.masspa-item-category-title-1{\r\n    color: #141517;\r\n    line-height: 22px;\r\n    margin-bottom: 0;\r\n    text-transform: uppercase;\r\n}\r\n.masspa-item-category-title-2{\r\n  color: #ffffff;\r\n  line-height: 22px;\r\n  margin-bottom: 0;\r\n  text-align: center;\r\n  font-weight: 400;\r\n  text-transform: uppercase;\r\n  height: 100%;\r\n  white-space: nowrap;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.masspa-item-category-text{\r\n  height: 78px;\r\n  overflow: hidden;\r\n}\r\n\r\n.masspa-item-category-text-layout02 p , .masspa-item-category-text-layout02 p span,  .masspa-item-category-text-layout02 span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 50px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 2;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n  font-size: 15px;\r\n  padding: 0px;\r\n}\r\n\r\n.masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n  color: #2c2e3f !important;\r\n  font-family: sans-serif !important;\r\n  line-height: 1.625 !important;\r\n  height: 70px;\r\n  overflow: hidden;\r\n  display: -webkit-box;\r\n  -webkit-line-clamp: 3;\r\n  -webkit-box-orient: vertical;\r\n  text-overflow: ellipsis;\r\n}\r\n\r\n.masspa-item-category-overlay-2{\r\n  position: absolute;\r\n  background-image:  linear-gradient(to bottom, rgba(255,0,0,0), rgba(40,40,40,1));\r\n  bottom: 0;\r\n  height: 40%;\r\n  width: inherit;\r\n  display: inline-block;\r\n}\r\n\r\n.masspa-item-category-zoom, .masspa-item-category-rotate{\r\n  -webkit-transition: all .5s;\r\n  -moz-transition: all .5s;\r\n  -o-transition: all .5s;\r\n  transition: all .5s;\r\n}\r\n.masspa-item-category-zoom:hover , .masspa-item-category-zoom:focus {\r\n  -ms-transform: scale(1.2);\r\n  -moz-transform: scale(1.2);\r\n  -webkit-transform: scale(1.2);\r\n  -o-transform: scale(1.2);\r\n  transform: scale(1.2);\r\n}\r\n\r\n.masspa-item-category-rotate:hover , .masspa-item-category-rotate:focus{\r\n  -ms-transform: rotate(360deg);\r\n  -moz-transform: rotate(360deg);\r\n  -webkit-transform: rotate(360deg);\r\n  -o-transform: rotate(360deg);\r\n  transform: rotate(360deg);\r\n}\r\n\r\n\r\n@media only screen and (min-width: 768px){\r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span {\r\n    font-size: 14px;\r\n  }\r\n  .masspa-item-category-title-1{\r\n    font-size: 18px;\r\n  }\r\n  .masspa-item-category-title-2{\r\n    font-size: 15px;\r\n    padding: 16px 8px;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) {\r\n  .masspa-item-category-title-1{\r\n    font-size: 20px;\r\n    padding: 30px 8px 5px;\r\n  }\r\n \r\n  .masspa-item-category-text p , .masspa-item-category-text p span,  .masspa-item-category-text span{\r\n    font-size: 14px;\r\n  }\r\n\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) and (min-width: 457px){\r\n  .masspa-item-category-title-2{\r\n    font-size: 18px;\r\n    padding: 15px 15px 0px;\r\n  }\r\n  .masspa-item-category-container{\r\n    padding: 20px 0px;\r\n  }  \r\n\r\n}\r\n\r\n@media only screen and (max-width: 456.98px) {\r\n  .masspa-item-category-title-2{\r\n    font-size: 15px;\r\n    padding: 15px 15px 0px;\r\n  }\r\n  .masspa-item-category-text{\r\n    padding-top: 20px;\r\n  }\r\n\r\n}\r\n\r\n@media (min-width: 576px) {\r\n  .ms-item-col-sm {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-sm-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-sm-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-col-sm-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-col-sm-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-col-sm-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-col-sm-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-col-sm-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-col-sm-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-col-sm-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-col-sm-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-col-sm-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-col-sm-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-col-sm-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n\r\n}\r\n@media (min-width: 768.98px) {\r\n  .masspa-item-category-card{\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n  .ms-item-col-md {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-md-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-md-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-col-md-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-col-md-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-col-md-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-col-md-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-col-md-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-col-md-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-col-md-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-col-md-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-col-md-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-col-md-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-col-md-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n@media (min-width: 992px) {\r\n  .ms-item-col-lg {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-lg-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-lg-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-col-lg-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-col-lg-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-col-lg-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-col-lg-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-col-lg-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-col-lg-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-col-lg-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-col-lg-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-col-lg-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-col-lg-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-col-lg-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n  .ms-item-col-xl {\r\n    -ms-flex-preferred-size: 0;\r\n    flex-basis: 0;\r\n    -ms-flex-positive: 1;\r\n    flex-gms-item-category-row: 1;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-xl-auto {\r\n    -ms-flex: 0 0 auto;\r\n    flex: 0 0 auto;\r\n    width: auto;\r\n    max-width: 100%;\r\n  }\r\n  .ms-item-col-xl-1 {\r\n    -ms-flex: 0 0 8.333333%;\r\n    flex: 0 0 8.333333%;\r\n    max-width: 8.333333%;\r\n  }\r\n  .ms-item-col-xl-2 {\r\n    -ms-flex: 0 0 16.666667%;\r\n    flex: 0 0 16.666667%;\r\n    max-width: 16.666667%;\r\n  }\r\n  .ms-item-col-xl-3 {\r\n    -ms-flex: 0 0 25%;\r\n    flex: 0 0 25%;\r\n    max-width: 25%;\r\n  }\r\n  .ms-item-col-xl-4 {\r\n    -ms-flex: 0 0 33.333333%;\r\n    flex: 0 0 33.333333%;\r\n    max-width: 33.333333%;\r\n  }\r\n  .ms-item-col-xl-5 {\r\n    -ms-flex: 0 0 41.666667%;\r\n    flex: 0 0 41.666667%;\r\n    max-width: 41.666667%;\r\n  }\r\n  .ms-item-col-xl-6 {\r\n    -ms-flex: 0 0 50%;\r\n    flex: 0 0 50%;\r\n    max-width: 50%;\r\n  }\r\n  .ms-item-col-xl-7 {\r\n    -ms-flex: 0 0 58.333333%;\r\n    flex: 0 0 58.333333%;\r\n    max-width: 58.333333%;\r\n  }\r\n  .ms-item-col-xl-8 {\r\n    -ms-flex: 0 0 66.666667%;\r\n    flex: 0 0 66.666667%;\r\n    max-width: 66.666667%;\r\n  }\r\n  .ms-item-col-xl-9 {\r\n    -ms-flex: 0 0 75%;\r\n    flex: 0 0 75%;\r\n    max-width: 75%;\r\n  }\r\n  .ms-item-col-xl-10 {\r\n    -ms-flex: 0 0 83.333333%;\r\n    flex: 0 0 83.333333%;\r\n    max-width: 83.333333%;\r\n  }\r\n  .ms-item-col-xl-11 {\r\n    -ms-flex: 0 0 91.666667%;\r\n    flex: 0 0 91.666667%;\r\n    max-width: 91.666667%;\r\n  }\r\n  .ms-item-col-xl-12 {\r\n    -ms-flex: 0 0 100%;\r\n    flex: 0 0 100%;\r\n    max-width: 100%;\r\n  }\r\n}\r\n\r\n@media only screen and (min-width: 1440px) {\r\n  .masspa-item-link-03{\r\n    margin: 0px auto\r\n  }\r\n}\r\n\r\n@media screen and (min-width:992px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n  }\r\n}\r\n@media screen  and (min-width:576px) and (max-width:991px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 30px;\r\n  }\r\n}\r\n\r\n@media screen  and (min-width:480px) and (max-width:575.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n    padding-top: 20px;\r\n  }\r\n}\r\n\r\n@media screen  and (max-width:479.98px){\r\n  .masspa-item-category-group-title-text{\r\n    padding-left: 0px;\r\n    padding-top: 20px;\r\n    text-align: center;\r\n  }\r\n  .masspa-item-category-text-layout02{\r\n    padding-top: 20px;\r\n  }\r\n  .masspa-item-link-03{\r\n    margin: 0px auto\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 767.98px) and (min-width: 576px){\r\n  .masspa-item-link-03 , .masspa-item-image-02,.masspa-item-image-01, .masspa-item-image-03, .masspa-item-image-04{\r\n    width: 200px !important;\r\n    height: 200px !important;\r\n}\r\n  .masspa-item-category-card{\r\n    display:flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 575.98px) {\r\n  .masspa-item-link-03 , .masspa-item-image-02,.masspa-item-image-01, .masspa-item-image-03, .masspa-item-image-04{\r\n    width: 200px !important;\r\n    height: 200px !important;\r\n  }\r\n  .masspa-item-link-03{\r\n    margin: 0px auto\r\n  }\r\n  .masspa-item-category-title-3{\r\n    text-align: center;\r\n  }\r\n}\r\n\r\n@media only screen and (max-width: 479.98px) {\r\n  .masspa-item-image-03{\r\n  margin: 0px auto\r\n  }\r\n  .masspa-item-category-card{display:flex;flex-direction:column;justify-content:center;align-items:center}\r\n}\r\n\r\n@media screen and (min-width: 240px) and (max-width:767.98px) {\r\n .ms-item-col-xs-6{flex:0 0 100%;max-width:100%}\r\n  }\r\n\r\n  @media screen and (min-width: 1024px) {\r\n    .ms-item-col-xs-6{flex:0 0 50%!important;max-width:50%!important}\r\n  }\r\n \r\n  @media screen and (min-width: 240px) {\r\n      .masspa-item-category-card{padding:15px 0}\r\n  }\r\n\r\n";
 styleInject(css);
 
 var _ref =
@@ -6150,12 +6150,6 @@ var MasspaItemCategory = function (_Component) {
 
     var _this = possibleConstructorReturn(this, (MasspaItemCategory.__proto__ || Object.getPrototypeOf(MasspaItemCategory)).call(this, props));
 
-    _this.handleClick = function (id) {
-      var link = _this.props.link;
-
-      navigate('' + link + id);
-    };
-
     _this.nextMenuCategory = _this.nextMenuCategory.bind(_this);
     _this.previousMenuCategory = _this.previousMenuCategory.bind(_this);
     return _this;
@@ -6226,7 +6220,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6234,9 +6228,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03 masspa-item-category-zoom',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement(
                               'span',
@@ -6260,7 +6252,7 @@ var MasspaItemCategory = function (_Component) {
                         );
                       } else if (animation === 'rotate') {
                         return React.createElement(
-                          'div',
+                          'a',
                           { className: 'masspa-item-category-container', key: i },
                           React.createElement(
                             'div',
@@ -6271,9 +6263,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03 masspa-item-category-rotate',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement(
                               'span',
@@ -6300,7 +6290,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6308,9 +6298,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement(
                               'span',
@@ -6339,7 +6327,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container' },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6347,9 +6335,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03 masspa-item-category-zoom',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement('img', { src: imageDefaut, alt: item.title,
                               style: {
@@ -6372,7 +6358,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container' },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6380,9 +6366,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03 masspa-item-category-rotate',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement('img', { src: imageDefaut, alt: item.title,
                               style: {
@@ -6405,7 +6389,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container' },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6413,9 +6397,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement('img', { src: imageDefaut, alt: item.title,
                               style: {
@@ -6443,7 +6425,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6451,9 +6433,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03 masspa-item-category-zoom',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement(
                               'span',
@@ -6480,7 +6460,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6488,9 +6468,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03 masspa-item-category-rotate',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement(
                               'span',
@@ -6517,7 +6495,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container', key: i },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6525,9 +6503,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement(
                               'span',
@@ -6556,7 +6532,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container' },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6564,9 +6540,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03 masspa-item-category-zoom',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement('img', { src: item.image, alt: item.title,
                               style: {
@@ -6589,7 +6563,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container' },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6597,9 +6571,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03 masspa-item-category-rotate',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement('img', { src: item.image, alt: item.title,
                               style: {
@@ -6622,7 +6594,7 @@ var MasspaItemCategory = function (_Component) {
                           'div',
                           { className: 'masspa-item-category-container' },
                           React.createElement(
-                            'div',
+                            'a',
                             { style: {
                                 width: sizeImage + 'px',
                                 height: sizeImage + 'px',
@@ -6630,9 +6602,7 @@ var MasspaItemCategory = function (_Component) {
                                 border: borderImage
                               },
                               className: 'masspa-item-link-03',
-                              onClick: function onClick() {
-                                return _this2.handleClick(item.itemCode);
-                              }
+                              href: '' + link + item.itemCode
                             },
                             React.createElement('img', { src: imageDefaut, alt: item.title,
                               style: {
@@ -6679,7 +6649,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -6687,9 +6657,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03 masspa-item-category-zoom',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement(
                                   'span',
@@ -6732,7 +6700,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -6740,9 +6708,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03 masspa-item-category-rotate',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement(
                                   'span',
@@ -6785,7 +6751,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -6793,9 +6759,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement(
                                   'span',
@@ -6840,7 +6804,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -6848,9 +6812,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03 masspa-item-category-zoom',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement('img', { src: imageDefaut, alt: item.title,
                                   style: {
@@ -6889,7 +6851,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -6897,9 +6859,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03 masspa-item-category-rotate',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement('img', { src: imageDefaut, alt: item.title,
                                   style: {
@@ -6938,7 +6898,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -6946,9 +6906,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement('img', { src: imageDefaut, alt: item.title,
                                   style: {
@@ -6988,7 +6946,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -6996,9 +6954,7 @@ var MasspaItemCategory = function (_Component) {
                                   border: borderImage
                                 },
                                 className: 'masspa-item-link-03 masspa-item-category-zoom',
-                                onClick: function onClick() {
-                                  return _this2.handleClick(item.itemCode);
-                                }
+                                href: '' + link + item.itemCode
                               },
                               React.createElement(
                                 'span',
@@ -7029,7 +6985,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7037,9 +6993,7 @@ var MasspaItemCategory = function (_Component) {
                                   border: borderImage
                                 },
                                 className: 'masspa-item-link-03 masspa-item-category-rotate',
-                                onClick: function onClick() {
-                                  return _this2.handleClick(item.itemCode);
-                                }
+                                href: '' + link + item.itemCode
                               },
                               React.createElement(
                                 'span',
@@ -7070,7 +7024,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7078,9 +7032,7 @@ var MasspaItemCategory = function (_Component) {
                                   border: borderImage
                                 },
                                 className: 'masspa-item-link-03',
-                                onClick: function onClick() {
-                                  return _this2.handleClick(item.itemCode);
-                                }
+                                href: '' + link + item.itemCode
                               },
                               React.createElement(
                                 'span',
@@ -7113,7 +7065,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7121,9 +7073,7 @@ var MasspaItemCategory = function (_Component) {
                                   border: borderImage
                                 },
                                 className: 'masspa-item-link-03 masspa-item-category-zoom',
-                                onClick: function onClick() {
-                                  return _this2.handleClick(item.itemCode);
-                                }
+                                href: '' + link + item.itemCode
                               },
                               React.createElement('img', { src: imageDefaut, alt: item.title,
                                 style: {
@@ -7150,7 +7100,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7158,9 +7108,7 @@ var MasspaItemCategory = function (_Component) {
                                   border: borderImage
                                 },
                                 className: 'masspa-item-link-03 masspa-item-category-rotate',
-                                onClick: function onClick() {
-                                  return _this2.handleClick(item.itemCode);
-                                }
+                                href: '' + link + item.itemCode
                               },
                               React.createElement('img', { src: imageDefaut, alt: item.title,
                                 style: {
@@ -7187,7 +7135,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7195,9 +7143,7 @@ var MasspaItemCategory = function (_Component) {
                                   border: borderImage
                                 },
                                 className: 'masspa-item-link-03',
-                                onClick: function onClick() {
-                                  return _this2.handleClick(item.itemCode);
-                                }
+                                href: '' + link + item.itemCode
                               },
                               React.createElement('img', { src: imageDefaut, alt: item.title,
                                 style: {
@@ -7234,7 +7180,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -7242,9 +7188,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03 masspa-item-category-zoom',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement(
                                   'span',
@@ -7287,7 +7231,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -7295,9 +7239,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03 masspa-item-category-rotate',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement(
                                   'span',
@@ -7340,7 +7282,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -7348,9 +7290,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement(
                                   'span',
@@ -7395,7 +7335,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -7403,9 +7343,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03 masspa-item-category-zoom',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement('img', { src: item.image, alt: item.title,
                                   style: {
@@ -7444,7 +7382,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -7452,9 +7390,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03 masspa-item-category-rotate',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement('img', { src: item.image, alt: item.title,
                                   style: {
@@ -7493,7 +7429,7 @@ var MasspaItemCategory = function (_Component) {
                               'div',
                               { className: 'ms-item-col-md-5 ms-item-col-sm-5' },
                               React.createElement(
-                                'div',
+                                'a',
                                 { style: {
                                     width: sizeImage + 'px',
                                     height: sizeImage + 'px',
@@ -7501,9 +7437,7 @@ var MasspaItemCategory = function (_Component) {
                                     border: borderImage
                                   },
                                   className: 'masspa-item-link-03',
-                                  onClick: function onClick() {
-                                    return _this2.handleClick(item.itemCode);
-                                  }
+                                  href: '' + link + item.itemCode
                                 },
                                 React.createElement('img', { src: imageDefaut, alt: item.title,
                                   style: {
@@ -7543,7 +7477,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7580,7 +7514,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7617,7 +7551,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7656,7 +7590,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7664,9 +7598,7 @@ var MasspaItemCategory = function (_Component) {
                                   border: borderImage
                                 },
                                 className: 'masspa-item-link-03 masspa-item-category-zoom',
-                                onClick: function onClick() {
-                                  return _this2.handleClick(item.itemCode);
-                                }
+                                href: '' + link + item.itemCode
                               },
                               React.createElement('img', { src: item.image, alt: item.title,
                                 style: {
@@ -7693,7 +7625,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7701,9 +7633,7 @@ var MasspaItemCategory = function (_Component) {
                                   border: borderImage
                                 },
                                 className: 'masspa-item-link-03 masspa-item-category-rotate',
-                                onClick: function onClick() {
-                                  return _this2.handleClick(item.itemCode);
-                                }
+                                href: '' + link + item.itemCode
                               },
                               React.createElement('img', { src: item.image, alt: item.title,
                                 style: {
@@ -7730,7 +7660,7 @@ var MasspaItemCategory = function (_Component) {
                             'div',
                             { className: 'masspa-item-category-container' },
                             React.createElement(
-                              'div',
+                              'a',
                               { style: {
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
@@ -7738,9 +7668,7 @@ var MasspaItemCategory = function (_Component) {
                                   border: borderImage
                                 },
                                 className: 'masspa-item-link-03',
-                                onClick: function onClick() {
-                                  return _this2.handleClick(item.itemCode);
-                                }
+                                href: '' + link + item.itemCode
                               },
                               React.createElement('img', { src: item.image, alt: item.title,
                                 style: {

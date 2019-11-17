@@ -35,10 +35,6 @@ export default class MasspaItemCategory extends Component {
     this.sliderItemServices.slickPrev();
   }
 
-  handleClick=(id)=>{
-    const {link} = this.props;
-    navigate(`${link}${id}`)
-  }
 
 
   render() {
@@ -76,14 +72,14 @@ export default class MasspaItemCategory extends Component {
                             return (
                                 <div className="masspa-item-category-container"  key={i}>
                                 
-                                    <div style={{
+                                    <a style={{
                                         width: sizeImage + 'px',
                                         height: sizeImage + 'px',
                                         borderRadius : borderRadius === 'rounded' ? '50%' : borderRadius,
                                         border: borderImage
                                     }} 
                                      className="masspa-item-link-03 masspa-item-category-zoom"
-                                     onClick={()=>this.handleClick(item.itemCode)}
+                                     href={`${link}${item.itemCode}`}
                                      >
                                     <span className="masspa-item-category-overlay-2">
                                     <img  src={imageDefaut}  alt={item.title} 
@@ -96,14 +92,14 @@ export default class MasspaItemCategory extends Component {
                                     />
                                     <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                                     </span>
-                                  </div>
+                                  </a>
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                                 </div>
         
                             )
                           }else if(animation === 'rotate'){
                             return (
-                                <div className="masspa-item-category-container" key={i}>
+                                <a className="masspa-item-category-container" key={i}>
                                     <div style={{
                                         width: sizeImage + 'px',
                                         height: sizeImage + 'px',
@@ -111,7 +107,7 @@ export default class MasspaItemCategory extends Component {
                                         border: borderImage
                                     }} 
                                      className="masspa-item-link-03 masspa-item-category-rotate"
-                                     onClick={()=>this.handleClick(item.itemCode)}
+                                     href={`${link}${item.itemCode}`}
                                      >
                                     <span className="masspa-item-category-overlay-2">
                                     <img  src={imageDefaut}  alt={item.title} 
@@ -127,21 +123,21 @@ export default class MasspaItemCategory extends Component {
                                   </div>
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
 
-                                </div>
+                                </a>
         
                             )
                           }else{
                             return (
                            
                                 <div className="masspa-item-category-container" key={i}>
-                                    <div style={{
+                                    <a style={{
                                         width: sizeImage + 'px',
                                         height: sizeImage + 'px',
                                         borderRadius : borderRadius === 'rounded' ? '50%' : borderRadius,
                                         border: borderImage
                                     }} 
                                      className="masspa-item-link-03"
-                                     onClick={()=>this.handleClick(item.itemCode)}
+                                     href={`${link}${item.itemCode}`}
                                      >
                                     <span className="masspa-item-category-overlay-2">
                                     <img  src={imageDefaut}  alt={item.title} 
@@ -154,7 +150,7 @@ export default class MasspaItemCategory extends Component {
                                     />
                                     <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                                     </span>
-                                  </div>
+                                  </a>
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
 
                                 </div>
@@ -167,14 +163,14 @@ export default class MasspaItemCategory extends Component {
                            return (
                            
                             <div className="masspa-item-category-container">
-                            <div style={{
+                            <a style={{
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
                                   borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                                   border: borderImage
                                 }}
                                   className="masspa-item-link-03 masspa-item-category-zoom"
-                                  onClick={()=>this.handleClick(item.itemCode)}
+                                  href={`${link}${item.itemCode}`}
                                   >
                                   <img src={imageDefaut} alt={item.title}
                                     style={{
@@ -184,7 +180,7 @@ export default class MasspaItemCategory extends Component {
                                     }}
                                     className="masspa-item-image-01"
                                   />
-                                </div>
+                                </a>
                            
                               <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -196,14 +192,14 @@ export default class MasspaItemCategory extends Component {
                            return (
                           
                             <div className="masspa-item-category-container">
-                            <div style={{
+                            <a style={{
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
                                   borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                                   border: borderImage
                                 }}
                                   className="masspa-item-link-03 masspa-item-category-rotate"
-                                  onClick={()=>this.handleClick(item.itemCode)}
+                                  href={`${link}${item.itemCode}`}
                                   >
                                   <img src={imageDefaut} alt={item.title}
                                     style={{
@@ -213,7 +209,7 @@ export default class MasspaItemCategory extends Component {
                                     }}
                                     className="masspa-item-image-01"
                                   />
-                                </div>
+                                </a>
                            
                               <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -225,14 +221,14 @@ export default class MasspaItemCategory extends Component {
                            return (
                          
                             <div className="masspa-item-category-container">
-                            <div style={{
+                            <a style={{
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
                                   borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                                   border: borderImage
                                 }}
                                   className="masspa-item-link-03"
-                                  onClick={()=>this.handleClick(item.itemCode)}
+                                  href={`${link}${item.itemCode}`}
                                   >
                                   <img src={imageDefaut} alt={item.title}
                                     style={{
@@ -242,7 +238,7 @@ export default class MasspaItemCategory extends Component {
                                     }}
                                     className="masspa-item-image-01"
                                   />
-                                </div>
+                                </a>
                            
                               <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -262,14 +258,14 @@ export default class MasspaItemCategory extends Component {
                             return (
                          
                                 <div className="masspa-item-category-container" key={i}>
-                                    <div style={{
+                                    <a style={{
                                         width: sizeImage + 'px',
                                         height: sizeImage + 'px',
                                         borderRadius : borderRadius === 'rounded' ? '50%' : borderRadius,
                                         border: borderImage
                                     }} 
                                      className="masspa-item-link-03 masspa-item-category-zoom"
-                                     onClick={()=>this.handleClick(item.itemCode)}
+                                     href={`${link}${item.itemCode}`}
                                      >
                                     <span className="masspa-item-category-overlay-2">
                                     <img  src={item.image}  alt={item.title} 
@@ -282,7 +278,7 @@ export default class MasspaItemCategory extends Component {
                                     />
                                     <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                                     </span>
-                                  </div>
+                                  </a>
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
 
                                 </div>
@@ -293,14 +289,14 @@ export default class MasspaItemCategory extends Component {
                             return (
                             
                                 <div className="masspa-item-category-container" key={i}>
-                                    <div style={{
+                                    <a style={{
                                         width: sizeImage + 'px',
                                         height: sizeImage + 'px',
                                         borderRadius : borderRadius === 'rounded' ? '50%' : borderRadius,
                                         border: borderImage
                                     }} 
                                      className="masspa-item-link-03 masspa-item-category-rotate"
-                                     onClick={()=>this.handleClick(item.itemCode)}
+                                     href={`${link}${item.itemCode}`}
                                      >
                                     <span className="masspa-item-category-overlay-2">
                                     <img  src={item.image}  alt={item.title} 
@@ -313,7 +309,7 @@ export default class MasspaItemCategory extends Component {
                                     />
                                     <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                                     </span>
-                                  </div>
+                                  </a>
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
 
                                 </div>
@@ -324,14 +320,14 @@ export default class MasspaItemCategory extends Component {
                             return (
                            
                                 <div className="masspa-item-category-container" key={i}>
-                                  <div style={{
+                                  <a style={{
                                         width: sizeImage + 'px',
                                         height: sizeImage + 'px',
                                         borderRadius : borderRadius === 'rounded' ? '50%' : borderRadius,
                                         border: borderImage
                                     }} 
                                      className="masspa-item-link-03"
-                                     onClick={()=>this.handleClick(item.itemCode)}
+                                     href={`${link}${item.itemCode}`}
                                      >
                                     <span className="masspa-item-category-overlay-2">
                                     <img  src={item.image}  alt={item.title} 
@@ -344,7 +340,7 @@ export default class MasspaItemCategory extends Component {
                                     />
                                     <div  className="masspa-item-category-title-2" style={{color : `${colorTitle}`}}>{item.title}</div>
                                     </span>
-                                  </div>
+                                  </a>
                                   {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
 
                                 </div>
@@ -358,14 +354,14 @@ export default class MasspaItemCategory extends Component {
                            return (
                            
                             <div className="masspa-item-category-container">
-                            <div style={{
+                            <a style={{
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
                                   borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                                   border: borderImage
                                 }}
                                   className="masspa-item-link-03 masspa-item-category-zoom"
-                                  onClick={()=>this.handleClick(item.itemCode)}
+                                  href={`${link}${item.itemCode}`}
                                   >
                                   <img src={item.image} alt={item.title}
                                     style={{
@@ -375,7 +371,7 @@ export default class MasspaItemCategory extends Component {
                                     }}
                                     className="masspa-item-image-01"
                                   />
-                                </div>
+                                </a>
                            
                               <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -386,14 +382,14 @@ export default class MasspaItemCategory extends Component {
                           }else if(animation === 'rotate'){
                            return (
                             <div className="masspa-item-category-container">
-                            <div style={{
+                            <a style={{
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
                                   borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                                   border: borderImage
                                 }}
                                   className="masspa-item-link-03 masspa-item-category-rotate"
-                                  onClick={()=>this.handleClick(item.itemCode)}
+                                  href={`${link}${item.itemCode}`}
                                   >
                                   <img src={item.image} alt={item.title}
                                     style={{
@@ -403,7 +399,7 @@ export default class MasspaItemCategory extends Component {
                                     }}
                                     className="masspa-item-image-01"
                                   />
-                                </div>
+                                </a>
                            
                               <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -413,14 +409,14 @@ export default class MasspaItemCategory extends Component {
                           }else{
                            return (
                             <div className="masspa-item-category-container">
-                            <div style={{
+                            <a style={{
                                   width: sizeImage + 'px',
                                   height: sizeImage + 'px',
                                   borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                                   border: borderImage
                                 }}
                                   className="masspa-item-link-03"
-                                  onClick={()=>this.handleClick(item.itemCode)}
+                                  href={`${link}${item.itemCode}`}
                                   >
                                   <img src={imageDefaut} alt={item.title}
                                     style={{
@@ -430,7 +426,7 @@ export default class MasspaItemCategory extends Component {
                                     }}
                                     className="masspa-item-image-01"
                                   />
-                                </div>
+                                </a>
                            
                               <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                               {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -464,14 +460,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                       <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                            <div style={{
+                            <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-zoom"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <span className="masspa-item-category-overlay-2">
                                 <img src={imageDefaut} alt={item.title}
@@ -484,7 +480,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
 
                           </div>
                       <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -500,14 +496,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                       <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                            <div style={{
+                            <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-rotate"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <span className="masspa-item-category-overlay-2">
                                 <img src={imageDefaut} alt={item.title}
@@ -520,7 +516,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
 
                           </div>
                       <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -536,14 +532,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                            <div style={{
+                            <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <span className="masspa-item-category-overlay-2">
                                 <img src={imageDefaut} alt={item.title}
@@ -556,7 +552,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
 
                           </div>
                         <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -574,14 +570,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                            <div style={{
+                            <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-zoom"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={imageDefaut} alt={item.title}
                                 style={{
@@ -591,7 +587,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-04"
                               />
-                            </div>
+                            </a>
 
                           </div>
                         <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -609,14 +605,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                            <div style={{
+                            <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-rotate"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={imageDefaut} alt={item.title}
                                 style={{
@@ -626,7 +622,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-04"
                               />
-                            </div>
+                            </a>
 
                           </div>
                         <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -644,14 +640,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                            <div style={{
+                            <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={imageDefaut} alt={item.title}
                                 style={{
@@ -661,7 +657,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-04"
                               />
-                            </div>
+                            </a>
 
                           </div>
                         <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -683,14 +679,14 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-zoom"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <span className="masspa-item-category-overlay-2">
                                 <img src={imageDefaut} alt={item.title}
@@ -703,7 +699,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
                         
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -714,14 +710,14 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-rotate"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <span className="masspa-item-category-overlay-2">
                                 <img src={imageDefaut} alt={item.title}
@@ -734,7 +730,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
                         
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -745,14 +741,14 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <span className="masspa-item-category-overlay-2">
                                 <img src={imageDefaut} alt={item.title}
@@ -765,7 +761,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
                         
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -779,14 +775,14 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-zoom"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={imageDefaut} alt={item.title}
                                 style={{
@@ -796,7 +792,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-01"
                               />
-                            </div>
+                            </a>
                        
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -808,14 +804,14 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-rotate"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={imageDefaut} alt={item.title}
                                 style={{
@@ -825,7 +821,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-01"
                               />
-                            </div>
+                            </a>
                         
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -837,14 +833,14 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={imageDefaut} alt={item.title}
                                 style={{
@@ -854,7 +850,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-01"
                               />
-                            </div>
+                            </a>
                         
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -876,14 +872,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                       <div className="masspa-item-category-card fade-in-left">
                         <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-zoom"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <span className="masspa-item-category-overlay-2">
                                 <img src={item.image} alt={item.title}
@@ -896,7 +892,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
                     
                         </div>
                       <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -912,14 +908,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                       <div className="masspa-item-category-card fade-in-left">
                         <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-rotate"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <span className="masspa-item-category-overlay-2">
                                 <img src={item.image} alt={item.title}
@@ -932,7 +928,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
                       
                         </div>
                       <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -948,14 +944,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                          <div style={{
+                          <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <span className="masspa-item-category-overlay-2">
                                 <img src={item.image} alt={item.title}
@@ -968,7 +964,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
                        
                           </div>
                         <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -986,14 +982,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                          <div style={{
+                          <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-zoom"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={item.image} alt={item.title}
                                 style={{
@@ -1003,7 +999,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-04"
                               />
-                            </div>
+                            </a>
                          
                           </div>
                         <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -1024,14 +1020,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                          <div style={{
+                          <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03 masspa-item-category-rotate"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={item.image} alt={item.title}
                                 style={{
@@ -1041,7 +1037,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-04"
                               />
-                            </div>
+                            </a>
                         
                           </div>
                         <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -1062,14 +1058,14 @@ export default class MasspaItemCategory extends Component {
                       <div className="ms-item-col-md-6 ms-item-col-sm-12 ms-item-col-xs-6" key={i}>
                         <div className="masspa-item-category-card fade-in-left">
                           <div className="ms-item-col-md-5 ms-item-col-sm-5">
-                          <div style={{
+                          <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={imageDefaut} alt={item.title}
                                 style={{
@@ -1079,7 +1075,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-04"
                               />
-                            </div>
+                            </a>
                        
                           </div>
                         <div className="ms-item-col-md-7 ms-item-col-sm-7">
@@ -1104,7 +1100,7 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
@@ -1122,7 +1118,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
                    
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -1133,7 +1129,7 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
@@ -1151,7 +1147,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
                          
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -1162,7 +1158,7 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
@@ -1180,7 +1176,7 @@ export default class MasspaItemCategory extends Component {
                                 />
                                 <div className="masspa-item-category-title-2" style={{ color: `${colorTitle}` }}>{item.title}</div>
                               </span>
-                            </div>
+                            </a>
                        
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
                         </div>
@@ -1194,14 +1190,14 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                       <div className="masspa-item-category-container">
-                      <div style={{
+                      <a style={{
                             width: sizeImage + 'px',
                             height: sizeImage + 'px',
                             borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                             border: borderImage
                           }}
                             className="masspa-item-link-03 masspa-item-category-zoom"
-                            onClick={()=>this.handleClick(item.itemCode)}
+                            href={`${link}${item.itemCode}`}
                             >
                             <img src={item.image} alt={item.title}
                               style={{
@@ -1211,7 +1207,7 @@ export default class MasspaItemCategory extends Component {
                               }}
                               className="masspa-item-image-01"
                             />
-                          </div>
+                          </a>
                      
                         <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                         {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -1223,14 +1219,14 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                       <div className="masspa-item-category-container">
-                      <div style={{
+                      <a style={{
                             width: sizeImage + 'px',
                             height: sizeImage + 'px',
                             borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                             border: borderImage
                           }}
                             className="masspa-item-link-03 masspa-item-category-rotate"
-                            onClick={()=>this.handleClick(item.itemCode)}
+                            href={`${link}${item.itemCode}`}
                             >
                             <img src={item.image} alt={item.title}
                               style={{
@@ -1240,7 +1236,7 @@ export default class MasspaItemCategory extends Component {
                               }}
                               className="masspa-item-image-01"
                             />
-                          </div>
+                          </a>
                      
                         <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                         {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
@@ -1252,14 +1248,14 @@ export default class MasspaItemCategory extends Component {
                     return (
                       <div className="ms-item-col-sm-12 ms-item-col-md-3 ms-item-col-lg-3" key={i}>
                         <div className="masspa-item-category-container">
-                        <div style={{
+                        <a style={{
                               width: sizeImage + 'px',
                               height: sizeImage + 'px',
                               borderRadius: borderRadius === 'rounded' ? '50%' : borderRadius,
                               border: borderImage
                             }}
                               className="masspa-item-link-03"
-                              onClick={()=>this.handleClick(item.itemCode)}
+                              href={`${link}${item.itemCode}`}
                               >
                               <img src={item.image} alt={item.title}
                                 style={{
@@ -1269,7 +1265,7 @@ export default class MasspaItemCategory extends Component {
                                 }}
                                 className="masspa-item-image-01"
                               />
-                            </div>
+                            </a>
                        
                           <div className="masspa-item-category-title-1" style={{color : `${colorTitle}`}}>{item.title}</div>
                           {item.description !== null ? <div className="masspa-item-category-text" dangerouslySetInnerHTML={{ __html: `${item.description}` }}></div> : <div></div>}
