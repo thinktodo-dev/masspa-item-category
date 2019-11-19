@@ -305,6 +305,8 @@ p{
   }
   .masspa-item-category-title-1{
     font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
   .masspa-item-category-title-2{
     font-size: 15px;
@@ -738,6 +740,10 @@ p{
   }
  
   @media screen and (min-width: 240px) {
-      .masspa-item-category-card{padding:15px 0}
+      .masspa-item-category-card {
+        padding: 15px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
   }
 
